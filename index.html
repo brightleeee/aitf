@@ -1,17 +1,3 @@
-<!--<!DOCTYPE HTML>-->
-<!--<html>-->
-<!--  <head>-->
-<!--    <title>Flask app</title>-->
-<!--  </head>-->
-<!--  <body>-->
-<!--    <h1>AI-TF 1조</h1>-->
-<!--    <button id="1" type="button" onclick="location.href='new'" class="button">신축건물 광코어 예측</button>-->
-<!--    <button id="1" type="button" onclick="location.href='old'" class="button">기축건물 광코어 DB조회</button>-->
-
-
-<!--  </body>-->
-<!--</html>-->
-
 <!-- 메인 페이지 -->
 <!DOCTYPE html>
 <html lang="ko">
@@ -27,19 +13,20 @@
     <title>KT AI P-TF</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="./static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <!-- MetisMenu CSS -->
-    <link href="./static/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="./static/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="./static/vendor/morrisjs/morris.css" rel="stylesheet">
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="./static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -63,7 +50,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="">OSP 시설분석을 통한 인입광케이블 예측설계</a>
+                <a class="navbar-brand" href="index.html">아웅 하기싫어</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -114,7 +101,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href=""><i class="fa fa-lightbulb-o fa-fw"></i> 인입광 코어 설계 예측</a>
+                            <a href="index.html"><i class="fa fa-lightbulb-o fa-fw"></i> 인입광 코어 설계 예측</a>
                         </li>
                         <li>
                             <a href="address.html"><i class="glyphicon glyphicon-search"></i> &nbsp;주소지 조회</a>
@@ -218,9 +205,104 @@
 
         <div id="page-wrapper">
             <div class="row">
+                <div class="card-body">
+                                        <form>
+                                            <div class="container">
+                                            <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                <label class="small mb-2" for="inputEmailAddress">ID</label>
+                                                <input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="아이디 입력" />
+                                            </div>
+                                            </div>
+                                                <div class="col">
+                                                <div class="form-group">
+                                                <label class="small mb-2" for="inputPassword">Password</label>
+                                                <input class="form-control py-4" id="inputPassword" type="password" placeholder="비밀번호 입력" />
+                                            </div>
+                                                  </div>
+                                            </div>
+                                                </div>
+                                            <div class="form-group">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" />
+                                                    <label class="custom-control-label" for="rememberPasswordCheck">아이디 저장</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                                                <a class="small" href="../static/dist/password.html">비밀번호 찾기</a>
+                                                <a class="btn btn-primary" href="../static/pages/index.html">로그인</a>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                <table class="table">
+                    <br>
+                    <button class="btn btn-outline-success my-2 my-sm-0" onclick="btn_click();">test</button>
+  <thead id="head">
+    <tr>
+      <th scope="col">순번</th>
+      <th scope="col">주소지</th>
+      <th scope="col">면적</th>
+      <th scope="col">용도</th>
+      <th scope="col">세대수</th>
+      <th scope="col">최고층수</th>
+      <th scope="col">준공예정일</th>
+    </tr>
+  </thead>
+  <tbody id="body">
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+                <h2>투자비 산출</h2>
+                    <div class="container">
+        <form action="#" method="post" novalidate="novalidate">
+            <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="page-header">???</h3>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <input type="text" class="form-control search-slt" placeholder="Enter Pickup City">
+                        </div>
+                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <input type="text" class="form-control search-slt" placeholder="Enter Drop City">
+                        </div>
+                          <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                <option>Select Vehicle</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <button type="button" class="btn btn-danger wrn-btn">Search</button>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </form>
+    </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
@@ -263,24 +345,70 @@
         <!-- /#page-wrapper -->
 
     </div>
-    <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="./static/vendor/jquery/jquery.min.js"></script>
+
+
+
+
+    <script src="../vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="./static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="./static/vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
 
     <!-- Morris Charts JavaScript -->
-    <script src="./static/vendor/raphael/raphael.min.js"></script>
-    <script src="./static/vendor/morrisjs/morris.min.js"></script>
-    <script src="./static/data/morris-data.js"></script>
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="./static/dist/js/sb-admin-2.js"></script>
+    <script src="../dist/js/sb-admin-2.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+            function btn_click() {
+
+            var s = "test"
+            $("#body").empty()
+            $.ajax({
+                            type : 'POST',
+                            url : 'http://127.0.0.1:5000/test',
+                            data : {
+                                    itemid:s
+                            },
+                            dataType : 'JSON',
+                            success : function(result)
+                                {
+                                console.log(result)
+                                console.log(result[0])
+
+                                var locations =result
+
+
+                                        for (var i in locations){
+                                          //Keep in mind we are using "Template Litterals to create rows"
+                                          var row = `<tr>
+                                                     <td>${locations[i][0]}</td>
+                                                     <td>${locations[i][1]}</td>
+                                                     <td>${locations[i][2]}</td>
+                                                     <td>${locations[i][3]}</td>
+                                                     <td>${locations[i][4]}</td>
+                                                     <td>${locations[i][5]}</td>
+                                                     <td>${locations[i][6]}</td>
+                                                     </tr>`
+                                            var table = $('#body')
+                                          table.append(row)
+                                        }
+
+                                }
+                    });
+    }
+
+</script>
 
 </body>
 
