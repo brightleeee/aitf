@@ -1,0 +1,803 @@
+<!-- 메인 페이지 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>KT AI P-TF</title>
+    <style>
+        .label {
+          color: white;
+          padding: 8px;
+          font-family: Arial; }
+
+
+
+
+
+
+    </style>
+    <style>
+        .search-sec{
+                background: #1B4669;padding: 2rem;
+
+
+
+
+
+
+    </style>
+    <style>
+        .search-sec1{
+                background: #333252;padding: 2rem;
+
+
+
+
+
+
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Simple</a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown">
+                <!-- /.dropdown-messages -->
+            </li>
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <!-- /.dropdown-tasks -->
+            </li>
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <!-- /.dropdown-alerts -->
+            </li>
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="../../../templates/login_test.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+        <!-- /.navbar-top-links -->
+</div>
+<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="nav" id="side-menu">
+            <li class="sidebar-search">
+                <div class="input-group custom-search-form">
+                    <input type="text" class="form-control" placeholder="Search..."> <!-- 기능 사용 보류 -->
+                    <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                </div>
+                <!-- /input-group -->
+            </li>
+            <li>
+                <a href="index.html"><i class="fa fa-lightbulb-o fa-fw"></i> 인입광 코어 설계 예측</a>
+            </li>
+            <li>
+                <a href="address.html"><i class="glyphicon glyphicon-search"></i> &nbsp;주소지 조회</a>
+            </li>
+            <li>
+                <a href="poi.html"><i class="glyphicon glyphicon-search"></i> &nbsp;건물명(POI) 조회</a>
+            </li>
+            <li>
+                <a href="already.html"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;기축 시설 정보</a>
+            </li>
+            <li>
+                <a><i class="glyphicon glyphicon-list-alt"></i> ▼기능▼</a>
+            </li>
+            <li>
+                <a href="forms.html"><i class="glyphicon glyphicon-list-alt"></i> Forms</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="flot.html">Flot Charts</a>
+                    </li>
+                    <li>
+                        <a href="morris.html">Morris.js Charts</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="panels-wells.html">Panels and Wells</a>
+                    </li>
+                    <li>
+                        <a href="buttons.html">Buttons</a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">Notifications</a>
+                    </li>
+                    <li>
+                        <a href="typography.html">Typography</a>
+                    </li>
+                    <li>
+                        <a href="icons.html"> Icons</a>
+                    </li>
+                    <li>
+                        <a href="grid.html">Grid</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Drops<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="#">Second Level Item</a>
+                    </li>
+                    <li>
+                        <a href="#">Second Level Item</a>
+                    </li>
+                    <li>
+                        <a href="#">Third Level <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-third-level -->
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="blank.html">Blank Page</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:5000/templates/login_test.html">Login Page</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+        </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+</div>
+<!-- /.navbar-static-side -->
+</nav>
+
+<div id="page-wrapper">
+    <h3>-Page Divider-</h3>
+    <h5>TEST1</h5>
+    <section class="search-sec">
+        <form action="#" method="post" novalidate="novalidate">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <label class="text-white" for="inputEmail1">입력Text 1</label>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <label class="text-white" for="inputEmail2">입력Text 1</label>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <label class="text-white" for="inputEmail3">입력Text 1</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-2 col-sm-12">
+                            <input type="text" class="form-control search-slt" placeholder="Enter Pickup City"
+                                   id="param11">
+                        </div>
+                        <div class="col-lg-3 col-md-2 col-sm-12">
+                            <input type="text" class="form-control search-slt" placeholder="Enter Drop City">
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                <option>Select Vehicle</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <button type="button" class="btn btn-danger wrn-btn" onclick="btn_click2();">Search
+                            </button>
+                            <button type="button" class="btn btn-danger wrn-btn" onclick="btn_click2();">Reset
+                            </button>
+                            <button type="button" class="btn btn-danger wrn-btn" onclick="btn_click2();">Export
+                            </button>
+                        </div>
+                    </div>
+                    <p style="margin-top:5px;">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-12 pt-0">
+                            <input type="text" class="form-control search-slt" placeholder="Enter Pickup City"
+                                   id="param12">
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <input type="text" class="form-control search-slt" placeholder="Enter Drop City">
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <input type="text" class="form-control search-slt" placeholder="Enter Drop City">
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <button type="button" class="btn btn-danger wrn-btn" onclick="btn_click2();">Search
+                            </button>
+                            <button type="button" class="btn btn-danger wrn-btn" onclick="btn_click2();">Reset
+                            </button>
+                            <button type="button" class="btn btn-danger wrn-btn" onclick="btn_click2();">Export
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </section>
+
+    <button class="btn btn-outline-success my-2 my-sm-0" onclick="btn_click();">test</button>
+    <br>
+    <h5>TEST2</h5>
+    <table class="table">
+        <thead id="head">
+        <tr>
+            <th scope="col">순번</th>
+            <th scope="col">주소지</th>
+            <th scope="col">면적</th>
+            <th scope="col">용도</th>
+            <th scope="col">세대수</th>
+            <th scope="col">최고층수</th>
+            <th scope="col">준공예정일</th>
+        </tr>
+        </thead>
+        <tbody id="body">
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <h3>Page Divider</h3>
+    <h5>TEST3</h5>
+    <section class="search-sec1">
+        <form action="#" method="post" novalidate="novalidate">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <label class="text-white" for="inputEmail1">입력Text 1</label>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <label class="text-white" for="inputEmail2">입력Text 1</label>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <label class="text-white" for="inputEmail3">입력Text 1</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <input type="text" class="form-control search-slt" placeholder="Enter Pickup City"
+                                   id="param1">
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <input type="text" class="form-control search-slt" placeholder="Enter Drop City">
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                <option>Select Vehicle</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <button type="button" class="btn btn-danger wrn-btn" onclick="btn_click2();">Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </section>
+
+    <br>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card text-white bg-dark text-center">
+                <div class="card-body card-title">
+                    <!--                        <h1 class="m-b-2"><i class="fa fa-facebook display-2"></i></h1>-->
+                    <h6 class="text-light">Case 1</h6>
+                    <h3 class="text-light">result</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card text-white bg-dark text-center">
+                <div class="card-body card-title">
+                    <!--                        <h1 class="m-b-2"><i class="fa fa-facebook display-2"></i></h1>-->
+                    <h6 class="text-light">Case 2</h6>
+                    <h3 class="text-light">
+                            <span class="quiz-text">
+                                result
+                            </span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+    <button id="jsBtn" type="button" onclick="changeByJS()">Btn</button>
+    <button><a href="../../../test.html">Test for..</a></button>
+    <button><a href="https://now.kt.co.kr/dsn/map" onclick="window.open(this.href); return false">Link to..</a></button>
+
+    <br>
+    <br>
+
+    <a href="https://now.kt.co.kr/sdn/map#Link" title="Link"
+       onclick="fnPopupPage('sdnOpticCoreSelMng', '광코어 선정', '550', '570');">광코어 선정</a>
+    </div>
+    <!--바디 마지막-->
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row">
+                <div class="container-fluid d-flex justify-content-left">
+                    <div class="col-sm-6 col-md-6">
+                        <div class="card">
+                            <div class="card-header">Radar chart</div>
+                            <div class="card-body" style="height: 400px">
+                                <div class="chartjs-size-monitor"
+                                     style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                    <div class="chartjs-size-monitor-expand"
+                                         style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                        <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
+                                    </div>
+                                    <div class="chartjs-size-monitor-shrink"
+                                         style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                        <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                                    </div>
+                                </div>
+                                <canvas id="chart-line" width="299px" height="220px" class="chartjs-render-monitor"
+                                        style="display: block; width: 299px; height: 200px;"></canvas>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                        <div class="card">
+                            <div class="card-header">Scatter chart</div>
+                            <div class="card-body" style="height: 400px">
+                                <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+# 바디부분
+
+</div>
+
+
+<!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-8">
+
+        <!-- /.panel -->
+
+        <!-- /.col-lg-4 (nested) -->
+        <div class="col-lg-8">
+            <div id="morris-bar-chart"></div>
+        </div>
+        <!-- /.col-lg-8 (nested) -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.panel-body -->
+</div>
+<!-- /.panel -->
+<!-- /.col-lg-8 -->
+<div class="col-lg-4">
+    <div class="panel panel-default">
+        <!-- /.panel-heading -->
+
+        <!-- /.panel-body -->
+    </div>
+    <!-- /.panel -->
+    <!-- /.panel -->
+
+    <!-- /.panel .chat-panel -->
+</div>
+<!-- /.col-lg-4 -->
+</div>
+<!-- /.row -->
+</div>
+<!-- /#page-wrapper -->
+
+
+</div>
+
+
+<script src="../vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="../vendor/raphael/raphael.min.js"></script>
+<script src="../vendor/morrisjs/morris.min.js"></script>
+<script src="../data/morris-data.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../dist/js/sb-admin-2.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+            function btn_click() {
+
+            var s = "test"
+            $("#body").empty()
+            $.ajax({
+                            type : 'POST',
+                            url : 'http://127.0.0.1:5000/test',
+                            data : {
+                                    itemid:s
+                            },
+                            dataType : 'JSON',
+                            success : function(result)
+                                {
+                                console.log(result)
+                                console.log(result[0])
+
+                                var locations =result
+
+
+                                        for (var i in locations){
+                                          //Keep in mind we are using "Template Litterals to create rows"
+                                          var row = `<tr>
+                                                     <td>${locations[i][0]}</td>
+                                                     <td>${locations[i][1]}</td>
+                                                     <td>${locations[i][2]}</td>
+                                                     <td>${locations[i][3]}</td>
+                                                     <td>${locations[i][4]}</td>
+                                                     <td>${locations[i][5]}</td>
+                                                     <td>${locations[i][6]}</td>
+                                                     </tr>`
+                                            var table = $('#body')
+                                          table.append(row)
+                                        }
+
+                                }
+                    });
+    }
+
+            function btn_click2() {
+
+            var s = document.getElementById('param1').value
+            console.log(param1)
+            $("#body").empty()
+            $.ajax({
+                            type : 'POST',
+                            url : 'http://127.0.0.1:5000/test',
+                            data : {
+                                    itemid:s
+                            },
+                            dataType : 'JSON',
+                            success : function(result)
+                                {
+                                console.log(result)
+                                console.log(result[0])
+
+                                var locations = result
+
+
+                                        for (var i in locations){
+                                          //Keep in mind we are using "Template Litterals to create rows"
+                                          var row = `<tr>
+                                                     <td>${locations[i][0]}</td>
+                                                     <td>${locations[i][1]}</td>
+                                                     <td>${locations[i][2]}</td>
+                                                     <td>${locations[i][3]}</td>
+                                                     <td>${locations[i][4]}</td>
+                                                     <td>${locations[i][5]}</td>
+                                                     <td>${locations[i][6]}</td>
+                                                     </tr>`
+                                            var table = $('#body')
+                                          table.append(row)
+                                        }
+
+                                }
+                    });
+    }
+
+
+</script>
+<script type="text/javascript">
+        function changeByJS() {
+            let x = document.getElementsByClassName("quiz-text")[0];
+            x.innerText="RESULT";
+            x.style.color="red";
+    }
+
+
+</script>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+<script>
+    $(document).ready(function() {
+        var ctx = $("#chart-line");
+        var myLineChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['factor A', 'factor B', 'factor C', 'factor D', 'factor E'],
+                datasets: [{
+                    data: [150, 164, 210, 195, 169],
+                    label: "Building X",
+                    borderColor: "#458af7",
+                    backgroundColor: '#458af7',
+                    fill: false
+                }, {
+                    data: [168, 170, 178, 190, 203],
+                    label: "Area",
+                    borderColor: "#3cba9f",
+                    fill: true,
+                    backgroundColor: '#3cba9f'
+                }]
+            },
+            options: {
+                title: {
+                    display: false,
+                    text: 'Analysis result'
+                }
+            }
+        });
+    });
+
+
+
+</script>
+<script type="text/javascript">
+window.onload = function() {
+
+var options = {
+	animationEnabled: true,
+	axisX: {
+		title: "Area"
+	},
+	axisY: {
+		title: "CA",
+		suffix: ""
+	},
+	legend: {
+		cursor: "pointer",
+		itemclick: toggleDataSeries
+	},
+	data: [{
+		type: "scatter",
+		name: "Building",
+		showInLegend: true,
+		markerColor: "#3cba9f",
+		toolTipContent: "<span style=\"color:#4F81BC \">{name}</span><br>Area: {x}<br>CA: {y}",
+		dataPoints: [
+			{ x: 100, y: 10 },
+			{ x: 110, y: 15 },
+			{ x: 130, y: 17 },
+			{ x: 140, y: 19 },
+			{ x: 145, y: 21 },
+			{ x: 400, y: 25 },
+			{ x: 430, y: 27 },
+			{ x: 444, y: 30 },
+			{ x: 460, y: 29 },
+			{ x: 490, y: 35 },
+			{ x: 500, y: 40 },
+			{ x: 510, y: 50 },
+			{ x: 600, y: 30 },
+			{ x: 700, y: 35 },
+			{ x: 800, y: 40 },
+			{ x: 900, y: 45 },
+			{ x: 1000, y: 47 },
+			{ x: 1200, y: 55 },
+			{ x: 1230, y: 51 },
+			{ x: 1300, y: 60 },
+			{ x: 1330, y: 65 },
+			{ x: 1400, y: 70 },
+			{ x: 1450, y: 71 },
+			{ x: 1500, y: 69 },
+			{ x: 1530, y: 75 },
+			{ x: 1590, y: 79 },
+			{ x: 1600, y: 62 },
+			{ x: 1620, y: 80 },
+			{ x: 1640, y: 85 },
+			{ x: 1700, y: 81 },
+			{ x: 1790, y: 89 },
+			{ x: 1800, y: 91 },
+			{ x: 1950, y: 93 },
+			{ x: 1980, y: 88 },
+			{ x: 2000, y: 90 }
+		]
+	},
+	{
+		type: "scatter",
+		name: "Predict",
+		showInLegend: true,
+		markerColor: "#458af7",
+		markerType: "triangle",
+		toolTipContent: "<span style=\"color:#C0504E\">{name}</span><br>Area: {x}<br>CA: {y}",
+		dataPoints: [
+			{ x: 100, y: 25 },
+			{ x: 110, y: 35 },
+			{ x: 130, y: 35 },
+			{ x: 140, y: 40 },
+			{ x: 145, y: 45 },
+			{ x: 400, y: 42 },
+			{ x: 430, y: 32 },
+			{ x: 444, y: 35 },
+			{ x: 460, y: 43 },
+			{ x: 490, y: 50 },
+			{ x: 500, y: 57 },
+			{ x: 510, y: 67 },
+			{ x: 600, y: 40 },
+			{ x: 700, y: 46 },
+			{ x: 800, y: 50 },
+			{ x: 900, y: 60 },
+			{ x: 1000, y: 66 },
+			{ x: 1200, y: 79 },
+			{ x: 1230, y: 60 },
+			{ x: 1300, y: 75 },
+			{ x: 1330, y: 80 },
+			{ x: 1400, y: 82 },
+			{ x: 1450, y: 88 },
+			{ x: 1500, y: 87 },
+			{ x: 1530, y: 88 },
+			{ x: 1590, y: 90 },
+			{ x: 1600, y: 80 },
+			{ x: 1620, y: 93 },
+			{ x: 1640, y: 91 },
+			{ x: 1700, y: 92 },
+			{ x: 1790, y: 93 },
+			{ x: 1800, y: 90 },
+			{ x: 1950, y: 91 },
+			{ x: 1980, y: 93 },
+			{ x: 2000, y: 95 }
+		]
+	}]
+};
+
+$("#chartContainer").CanvasJSChart(options);
+
+function toggleDataSeries(e) {
+	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	} else {
+		e.dataSeries.visible = true;
+	}
+	e.chart.render();
+}
+
+}
+
+
+</script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</body>
+
+</html>
