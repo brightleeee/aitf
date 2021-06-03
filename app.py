@@ -30,7 +30,8 @@ def yeon5():
 @app.route('/test', methods=['POST'])
 def languages():
     value1 = request.form['itemid']
-    value2 = "경기도"
+    value2 = request.form['itemid2']
+
     print(value1)
     print(value2)
     # value1 = "상가"
@@ -39,7 +40,7 @@ def languages():
     conn = sqlite3.connect('trest.db')
     curs = conn.cursor()
 
-    curs.execute('SELECT * FROM test1 where 용도=?, AND 주소지=?' (value1, value2, )) #test1에 있는 값을 조건 없이 불러옴
+    curs.execute('SELECT * FROM test1 where 용도=? and 주소지=?', (value1,value2)) #test1에 있는 값을 조건 없이 불러옴 or조건으로 입력값이 있는 것만 조회함
 
     # row_headers = [x[0] for x in curs.description]
     rows = curs.fetchall()

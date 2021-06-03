@@ -557,15 +557,20 @@
 
             function btn_click2() {
 
-            var s = document.getElementById('param1').value
 
+            var s = document.getElementById('param1').value
+            var t = document.getElementById('param2').value
+
+            console.log(s)
             console.log(param1)
+
             $("#body").empty()
             $.ajax({
                             type : 'POST',
                             url : 'http://127.0.0.1:5000/test',
                             data : {
-                                    itemid:s
+                                    itemid:s,
+                                    itemid2:t
                             },
                             dataType : 'JSON',
                             success : function(result)
