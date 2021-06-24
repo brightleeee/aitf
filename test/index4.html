@@ -1,0 +1,532 @@
+                                                          <!-- 메인 페이지 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>KT AI P-TF</title>
+
+
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../static/dist/css/yeon.css" rel="stylesheet">
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href=https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css rel="stylesheet">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style type="text/css">
+        .dohyeon { font-family: 'Noto Sans KR', sans-serif; }
+    </style>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation, margin-top 이용해서 navbar 위 아래 넓이 맞추기 -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-top: 35px">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand dohyeon" href="index.html" style="font-size: 25px; padding: 0px 40px;">KT AI P-TF 1조</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="../../../templates/login_test.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+
+                        <li>
+                            <a href="index.html"><i class="fa fa-lightbulb-o fa-fw"></i> 설계</a>
+                        </li>
+<!--                        <li>-->
+<!--                            <a href="index2.html"><i class="glyphicon glyphicon-search"></i> &nbsp;설계 상세</a>-->
+<!--                        </li>-->
+                        <li>
+                            <a><i class="glyphicon glyphicon-search"></i> &nbsp;설계 상세</a>
+                        </li>
+                        <li>
+                            <a href="index3.html"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;시설 현황</a>
+                        </li>
+<!--                        <li>-->
+<!--                            <a href="index4.html"><i class="glyphicon glyphicon-list-alt"></i> 　</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a><i class="glyphicon glyphicon-list-alt"></i> ▼기능▼</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="forms.html"><i class="glyphicon glyphicon-list-alt"></i> Forms</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>-->
+<!--                            <ul class="nav nav-second-level">-->
+<!--                                <li>-->
+<!--                                    <a href="flot.html">Flot Charts</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="morris.html">Morris.js Charts</a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                            &lt;!&ndash; /.nav-second-level &ndash;&gt;-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>-->
+<!--                            <ul class="nav nav-second-level">-->
+<!--                                <li>-->
+<!--                                    <a href="panels-wells.html">Panels and Wells</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="buttons.html">Buttons</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="notifications.html">Notifications</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="typography.html">Typography</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="icons.html"> Icons</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="grid.html">Grid</a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                            &lt;!&ndash; /.nav-second-level &ndash;&gt;-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Drops<span class="fa arrow"></span></a>-->
+<!--                            <ul class="nav nav-second-level">-->
+<!--                                <li>-->
+<!--                                    <a href="#">Second Level Item</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="#">Second Level Item</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="#">Third Level <span class="fa arrow"></span></a>-->
+<!--                                    <ul class="nav nav-third-level">-->
+<!--                                        <li>-->
+<!--                                            <a href="#">Third Level Item</a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="#">Third Level Item</a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="#">Third Level Item</a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="#">Third Level Item</a>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                    &lt;!&ndash; /.nav-third-level &ndash;&gt;-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                            &lt;!&ndash; /.nav-second-level &ndash;&gt;-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>-->
+<!--                            <ul class="nav nav-second-level">-->
+<!--                                <li>-->
+<!--                                    <a href="blank.html">Blank Page</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="http://127.0.0.1:5000/templates/login_test.html">Login Page</a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                            &lt;!&ndash; /.nav-second-level &ndash;&gt;-->
+<!--                        </li>-->
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper" style="margin: -20px 0 0 250px;">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h3 class="page-header dohyeon" style="margin: 20px 0 20px;">설계 Page</h3>
+                </div>
+
+            </div>
+            <!-- 내용 -->
+            <div class="row">
+                   <div class="panel panel-default">
+                        <div class="panel-heading">
+                            입력
+                        </div>
+                        <div class="panel-body">
+
+
+    <section class="search-sec">
+        <form action="#" method="post" novalidate="novalidate">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <label class="text-white" for="inputEmail1">연면적</label>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <label class="text-white" for="inputEmail2">최고 층 수</label>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <label class="text-white" for="inputEmail2">최저 층 수</label>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <label class="text-white" for="inputEmail3">지역</label>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <label class="text-white" for="inputEmail3">건물 유형</label>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <label class="text-white" for="inputEmail3">세대 수</label>
+                        </div>
+<!--                        <div class="col-lg-2 col-md-2 col-sm-12">-->
+<!--                            <label class="text-white" for="inputEmail3">구분</label>-->
+<!--                        </div>-->
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-12 pt-0">
+                            <input type="number" class="form-control search-slt" placeholder="예) 1350"
+                                   id="param1" style="width: 100%;">
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <input type="number" class="form-control search-slt" placeholder="예) 7"
+                                   id="param2" style="width: 100%;">
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <input type="number" class="form-control search-slt" placeholder="예) 7"
+                                   id="param3" style="width: 100%;">
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <select class="form-control search-slt" id="param4">
+                                <option>선택하세요</option>
+                                <option>도심</option>
+                                <option>농촌</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <select class="form-control search-slt" id="param5">
+                                <option>선택하세요</option>
+                                <option>주상복합</option>
+                                <option>빌딩</option>
+                                <option>상가</option>
+                                <option>오피스텔</option>
+
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <input type="number" class="form-control search-slt" placeholder="예) 45" id="param6">
+                        </div>
+                    </div>
+                    <p style="margin-top:5px;">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <button type="button" class="btn btn-info" onclick="btn_click2();changeByJS();changeByJS22();" style="padding: 8px 15px;">산출
+                            </button>
+                            <button type="reset" class="btn btn-info">Reset
+                            </button>
+<!--                            <button type="button" class="btn btn-danger wrn-btn" onclick="btn_click2();">Excel-->
+<!--                            </button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </section>
+
+                        </div>
+                    </div>
+            </div>
+
+                <p>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="true" aria-controls="collapseExample">
+            더보기
+        </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+
+                <table id="tableData" class="table">
+        <thead id="head">
+        <tr>
+            <th scope="col">순번</th>
+            <th scope="col">건물명</th>
+            <th scope="col">건물유형</th>
+            <th scope="col">연면적</th>
+            <th scope="col">최고 층 수</th>
+            <th scope="col">최저 층 수</th>
+            <th scope="col">지역</th>
+            <th scope="col">세대수</th>
+            <th scope="col">주소</th>
+            <th scope="col">인입광</th>
+        </tr>
+        </thead>
+                    <tbody id="mainbody">
+
+                    </tbody>
+    </table>
+
+        </div>
+    </div>
+
+<br>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            서비스 용량
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body text-center">
+                            <!-- Tab panes -->
+                                    <h3 class="text-light">총 코어 수 (초고속/무선/전용/광전화)</h3>
+                                    <h3 class="text-light">
+                                        <span class="quiz-text">
+                                            : 산출 결과
+                                        </span>
+                                        <span class="quiz-text2">
+                                            　
+                                        </span>
+                                    </h3>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
+
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            투자비 산출
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body text-center" style="padding: 20px;">
+<!--                                    <h4>Home Tab</h4>-->
+                                    <p>
+                                        <h3>ATACAMA Link</h3>
+                                        <button class="btn btn-info" style="margin: -4px">
+                                            <a href="https://now.kt.co.kr/dsn/map" onclick="window.open(this.href); return false" style="color: #ffffff;">Link to ATACAMA</a>
+                                        </button>
+                                    </p>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
+            </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript">
+            function btn_click2() {
+
+            var param1 = document.getElementById('param1').value
+            var param2 = document.getElementById('param2').value
+            var param3 = document.getElementById('param3').value
+            var param4 = document.getElementById('param4').value
+            var param5 = document.getElementById('param5').value
+            var param6 = document.getElementById('param6').value
+
+                                                 var t= $('#tableData').DataTable();
+                                                t.destroy();
+                                                var t = $('#tableData').DataTable(
+                                                    {
+                                                        columnDefs: [
+                                                            { targets: '_all' }
+                                                        ],
+                                                        lengthChange: false,
+                                                        searching: false,
+                                                        ordering: false,
+                                                        info: false,
+                                                        paging: true
+                                                    }
+                                                );
+                                                t.clear();
+                                                t.draw();
+
+            $.ajax({
+                            type : 'POST',
+                            url : 'http://127.0.0.1:5000/test',
+                            data : {
+                                    itemid1:param1,
+                                    itemid2:param2,
+                                    itemid3:param3,
+                                    itemid4:param4,
+                                    itemid5:param5,
+                                    itemid6:param6
+                            },
+                            dataType : 'JSON',
+                            success : function(result)
+                                {
+<!--                                console.log(result)-->
+                                console.log(result[0])
+
+                                var locations = result
+
+
+<!--                                var html = '';-->
+<!--                                var i;-->
+<!--                                for (i = 0; i < data.length; i++) {-->
+<!--                                    html += '<tr>' +-->
+<!--                                        '<td>' + data[i].category + '</td>' +-->
+<!--                                        '<td style="width:80px;">' +-->
+<!--                                        '<button type="button" class="btn btn-xs btn-info" data-category_id="' + data[i].category +'"><em class="fas fa-edit"></em></button> '+-->
+<!--                                            '<button type="button" class="btn btn-xs btn-danger" data-category_id="' + data[i].category +'"><em class="fas fa-trash"></em></button>'+-->
+<!--                                        '</td>' +-->
+<!--                                        '</tr>';-->
+<!--                                }-->
+<!--                                $('#tableData').html(html);-->
+
+
+                                        for (var i in locations){
+                                                                                      console.log(i)
+                                          //Keep in mind we are using "Template Litterals to create rows"
+
+<!--                                          var row = `<tr>-->
+<!--                                                     <td>${locations[i][0]}</td>-->
+<!--                                                     <td>${locations[i][3]}</td>-->
+<!--                                                     <td>${locations[i][5]}</td>-->
+<!--                                                     <td>${locations[i][7]}</td>-->
+<!--                                                     <td>${locations[i][8]}</td>-->
+<!--                                                     <td>${locations[i][9]}</td>-->
+<!--                                                     <td>${locations[i][10]}</td>-->
+<!--                                                     <td>${locations[i][11]}</td>-->
+<!--                                                     <td>${locations[i][12]}</td>-->
+<!--                                                     <td>${locations[i][14]}</td>-->
+<!--                                                     </tr>`-->
+<!--                                              $('#body').append(row)-->
+
+                                              t.row.add(
+                                                     [locations[i][0], locations[i][3], locations[i][5], locations[i][7],
+                                                      locations[i][4], locations[i][5], locations[i][6],locations[i][7],
+                                                      locations[i][8],locations[i][9],locations[i][10],locations[i][11],
+                                                      locations[i][12],locations[i][14]]).draw();
+                                              t.clear().destroy();
+
+
+                                        }
+
+                                }
+                    });
+    }
+</script>
+<script type="text/javascript">
+        function changeByJS() {
+            let x = document.getElementsByClassName("quiz-text")[0];
+            x.innerText="34코어";
+            x.style.color="red";
+    }
+</script>
+<script type="text/javascript">
+        function changeByJS22() {
+            let x = document.getElementsByClassName("quiz-text2")[0];
+            x.innerText="(12/7/5/10)";
+            x.style.color="black";
+    }
+
+
+    </script>
+    <script language="javascript">
+
+    </script>
+</body>
+
+</html>

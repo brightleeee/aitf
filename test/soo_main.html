@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Sales More</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link href="../static/css/styles.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <link href="../static/css/jangyeob.css" rel="stylesheet" />
+        <link href="../static/css/wonhee.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <link rel="stylesheet" href="../static/css/bootstrap-datepicker.css" type="text/css">
+        <link href="http://fonts.googleapis.com/earlyaccess/hanna.css" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet" type="text/css">
+        <!--밑에 한줄이 버튼 css-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.bootstrap4.css"/>
+
+        <style type="text/css">
+            .hanna { font-family: 'hanna'; }
+            .nanum { font-family: 'Nanum Barun Gothic'; }
+
+        </style>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <img src="../static/assets/img/brain.png" class="ai_ima">
+            <a class="navbar-brand nanum" style= "font-size: 1rem; color: #e3e3e3; " href="page1.html">B2B 영업지원 솔루션
+                <p class="hanna" style="margin-bottom:0rem; font-size: 1.5rem; color: #fff; ">Sales More Assistant</p></a>
+            <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+            </form>
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Activity Log</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="login.html">Logout</a>
+                    </div>
+                </li>
+            </ul>
+            <img src="../static/assets/img/ktkt.png" alt="..." class="ima_jang1">
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">MENU</div>
+                            <a class="nav-link menu1" href="page1.html">
+                                <img src="../static/assets/img/menu1.png" class="menu_pic">
+                                Traffic 리포트
+                            </a>
+                            <a class="nav-link collapsed menu1" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <img src="../static/assets/img/menu2.png" class="menu_pic">
+                                영업기회 분석
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="page2-1.html">속도증속 권고</a>
+                                    <a class="nav-link" href="page2-2.html">약정만료 도래</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed menu1" href="#" data-toggle="collapse" data-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
+                                <img src="../static/assets/img/menu3.png" class="menu_pic">
+                                B2B Alarm
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="page3-1.html">실시간 모니터링</a>
+                                    <a class="nav-link" href="page3-2.html">경보이력 조회</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Test
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4 title_jang nanum"><img src="../static/assets/img/tra.jpg" class= tra>Traffic 리포트</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active"><strong>고객별 Traffic 이용패턴 분석을 통한 컨설팅 리포트를 제공합니다.</strong></li>
+                        </ol>
+                        <ol class="breadcrumb mb-4">
+                            <div class="col-sm-7">
+                                <div class="row">
+                                    <div class="col-sm-1">
+                                        <h5 class="nanum" style="margin-top: 0.45rem;"><strong>부서</strong></h5>
+                                    </div>
+                                    <div class="col-sm-10" style="margin-bottom:  0.7rem;">
+                                        <div class="row">
+                                            <select class="form-select form-control col-sm-3" id="headquater">
+                                                <option value="">강남서부광역본부</option>
+                                            </select>
+                                            <select class="form-select form-control col-sm-3" id="team1" onchange="team1()">
+                                            </select>
+                                            <select class="form-select form-control col-sm-3" id="team2" onchange="team2()">
+                                                <option value="">법인영업부</option>
+                                            </select>
+                                            <select class="form-select form-control col-sm-3" id="team3">
+                                                <option value="">법인영업팀</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                    <div class="col-sm-1">
+                                        <h5 class="nanum" style="margin-top: 0.45rem;"><strong>기간</strong></h5>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <div class="row">
+                                            <div class="col-sm-3"> <div class="input-group date" data-target-input="nearest"> <input type="text" class="form-control datetimepicker-input" id="datetimepicker1" data-target="#datetimepicker1" value="2021-06-01"> <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker" id="datetimepicker11"> <div class="input-group-text"><i class="fa fa-calendar"></i></div> </div> </div> </div>
+                                            <div class="col-sm-3"> <div class="input-group date" data-target-input="nearest"> <input type="text" class="form-control datetimepicker-input" id="datetimepicker2" data-target="#datetimepicker2" value="2021-06-30"> <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker"> <div class="input-group-text"><i class="fa fa-calendar"></i></div> </div> </div> </div>
+                                            <div class="col-sm-1"></div>
+                                            <div class="col-sm-2">
+                                                <h5 class="nanum" style="margin-top: 0.45rem;"><strong>영업대표</strong></h5>
+                                            </div>
+                                            <input class="form-control col-sm-3" id="name" type="search" placeholder="이름" aria-label="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-1" style="padding-left: 30px; padding-right: 0px;">
+                                <label class="radio-inline" style="margin-top: 0.65rem;">
+                                    <h5 class="nanum"><input type="radio" name="inlineRadioOptions" id="inlineRadio1" checked value="leased_line_num" onclick="junseo1();"><strong> 전용번호</strong></h5>
+                                </label>
+                                <label class="radio-inline">
+                                    <h5 class="nanum"><input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="service_id" onclick="junseo2();"><strong> 서비스ID</strong></h5>
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <textarea id="linenum" class="form-control linenum_search" type="search" placeholder="다중검색" aria-label="Search"></textarea>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <strong><h3><button type="button" class="btn btn-search col-sm-12 nanum" id="search" onclick="search1();">조회</button></h3></strong>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <strong><h3><button type="button" class="btn btn-search col-sm-12 nanum" id="search2" onclick="report1();">리포트발행</button></h3></strong>
+                                    </div>
+                                    <div class="col-sm-6" id="buttons">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <strong><h3><button type="button" class="btn btn-search col-sm-12 nanum" onclick="modal1()">리포트상태</button></h3></strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <strong>고객 List 조회 결과</strong>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive table1">
+                                    <table class="table table-bordered" id="dataTable" style="width : 200%">
+                                        <thead>
+                                            <tr>
+                                                <th class="back1" style="width: 2%"><input type="checkbox" name="" id="checkAll"></th>
+                                                <th scope="col" class="back1" style="width: 12%">고객명</th>
+                                                <th scope="col" class="back1" style="width: 7%">상품명</th>
+                                                <th scope="col" class="back1" style="width: 5%">서비스계약ID</th>
+                                                <th scope="col" class="back1" style="width: 5%">전용회선번호</th>
+                                                <th scope="col" class="back1" style="width: 4%">청약속도</th>
+                                                <th scope="col" class="back1" style="width: 4%">제공속도</th>
+                                                <th scope="col" class="back1" style="width: 3%">수용국</th>
+                                                <th scope="col" class="back1" style="width: 5%">계약시작일</th>
+                                                <th scope="col" class="back1" style="width: 5%">계약종료일</th>
+                                                <th scope="col" class="back1" style="width: 8%">광역본부</th>
+                                                <th scope="col" class="back1" style="width: 6%">법인고객담당</th>
+                                                <th scope="col" class="back1" style="width: 6%">법인고객부명</th>
+                                                <th scope="col" class="back1" style="width: 6%">법인고객팀명</th>
+                                                <th scope="col" class="back1" style="width: 5%">영업대표명</th>
+                                                <th scope="col" class="back1" style="width: 3%">노드국</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="bodytest">
+                                            <div id = 'jang_spinner' class="spinner-border jang_spinner" style="display:none"></div>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                               </svg>
+                                <strong> 부가정보 선택</strong>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card card-body">
+                                            <span class="badge bg-secondary box_font">회선 부가정보</span>
+                                            <div style="margin-bottom: 10px;"></div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="jang_options"><input type="checkbox" name="chk_box" class="jang_options2" /> 회선유형</label>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="jang_options"><input type="checkbox" name="chk_box" class="jang_options2" /> IP 자원</label>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <center><img src="../static/assets/img/1.jpg" alt="..." class="img-responsive img-thumbnail"></center>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <center><img src="../static/assets/img/2.jpg" alt="..." class="img-responsive img-thumbnail"></center>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card card-body">
+                                            <span class="badge bg-secondary box_font">회선품질 이력</span>
+                                            <div style="margin-bottom: 10px;"></div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="jang_options"><input type="checkbox" name="chk_box" class="jang_options2" /> 고장이력</label>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="jang_options"><input type="checkbox" name="chk_box" class="jang_options2" /> UP/Down</label>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <center><img src="../static/assets/img/3.jpg" alt="..." class="img-responsive img-thumbnail"></center>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <center><img src="../static/assets/img/4.jpg" alt="..." class="img-responsive img-thumbnail"></center>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card card-body">
+                                            <span class="badge bg-secondary box_font">회선증속 방법</span>
+                                            <div style="margin-bottom: 10px;"></div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="jang_options"><input type="checkbox" name="chk_box" class="jang_options2" /> 중단여부</label>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="jang_options"><input type="checkbox" name="chk_box" class="jang_options2" /> 최대속도</label>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <center><img src="../static/assets/img/5.jpg" alt="..." class="img-responsive img-thumbnail"></center>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <center><img src="../static/assets/img/6.jpg" alt="..." class="img-responsive img-thumbnail"></center>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card card-body">
+                                            <span class="badge bg-secondary box_font">동일고객 비교</span>
+                                            <div style="margin-bottom: 10px;"></div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="jang_options"><input type="checkbox" name="chk_box" class="jang_options2" /> 제공속도</label>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="jang_options"><input type="checkbox" name="chk_box" class="jang_options2" /> IP 자원</label>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <center><img src="../static/assets/img/7.jpg" alt="..." class="img-responsive img-thumbnail"></center>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <center><img src="../static/assets/img/8.jpg" alt="..." class="img-responsive img-thumbnail"></center>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="reportModalLabel">리포트 상태</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">ID</th>
+                          <th scope="col">회선번호</th>
+                          <th scope="col">상태</th>
+                          <th scope="col">다운로드</th>
+                        </tr>
+                      </thead>
+                      <tbody id="jang_report">
+
+                      </tbody>
+                    </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="modal1()">새로고침</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="../static/js/bootstrap-datepicker.js"></script>
+        <script src="../static/js/bootstrap-datepicker.ko.min.js"></script>
+        <script src="../static/js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <!--여기서 7줄이 버튼에 필요한거임-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.bootstrap4.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.print.min.js"></script>
+
+        <script src="../static/assets/demo/datatables-demo.js"></script>
+
+        <script type= "text/javascript">
+            $("#checkAll").click(function(){
+                 if($("#checkAll").is(":checked")){
+                   $(".checkSelect").prop("checked",true);
+                 }
+                 else{
+                    $(".checkSelect").prop("checked",false);
+                 }
+            });
+        </script>
+
+
+        <script type="text/javascript">
+           function search1() {
+           <!--여기가 값을 가져오는 부분 검색옵션을-->
+            var team1 = document.getElementById("team1").value;
+            var team2 = document.getElementById("team2").value;
+            var team3 = document.getElementById("team3").value;
+            var linenum = document.getElementById("linenum").value;
+            var name = document.getElementById("name").value;
+
+
+            var ele = document.getElementsByName('inlineRadioOptions');
+            for(i=0;i<ele.length; i++) {
+                if(ele[i].checked)
+                    var junseo = ele[i].value;
+            }
+
+            <!--가져올 테이블을 부수고 다시만든다. WHY? 셀에 내가 원하는 class 를 박고싶은데 안돼 기존꺼 쓰면-->
+            var t= $('#dataTable').DataTable();
+            t.ajax.reload();
+            var t= $('#dataTable').DataTable(
+                {
+
+                    columnDefs: [
+
+                        { targets: '_all', className: 'tt' }
+                    ],
+
+                     "ordering": false
+
+                }
+            );
+            <!--datatables를 만든 사람들이 destroy를 하면 그 다음에 다 이걸 서놨어.-->
+            t.clear();
+            t.draw();
+
+<!--            조회 버튼을 클릭하면 이 스크립트들이 돌고, 스피너도 돌아-->
+            document.getElementById('dataTable_wrapper').style.display = 'none';
+            document.getElementById('jang_spinner').style.display = '';
+
+            <!--$('#bodytest').empty();-->
+            document.getElementsByTagName('th')[0].className="back1";
+            <!--보내는 부분-->
+             $.ajax({
+                            type : 'POST',
+                            url : 'http://221.163.1.21/search1',
+                            data : {
+                                    team1_py: team1,
+                                    team2_py: team2,
+                                    team3_py: team3,
+                                    linenum_py: linenum,
+                                    name_py: name,
+                                    junseo_py: junseo
+                            },
+                            dataType : 'JSON',
+
+                            success : function(result){
+                                locations = result[0]
+                                    for (var i in locations){
+                                        var tt = '<input type="checkbox" name="chk_box" class="checkSelect"/>'
+                                        t.row.add([tt,locations[i][0], locations[i][1], locations[i][2], locations[i][3], locations[i][4], locations[i][5], locations[i][6],locations[i][7],locations[i][8],locations[i][9],locations[i][10],locations[i][11],locations[i][12],locations[i][13],locations[i][14]]).draw();
+
+
+
+                                    }
+                                    var tes = document.getElementsByTagName('th');
+                                        for(var i=0;i<tes.length; i++) {
+                                                tes[i].classList.remove('tt');
+
+                                    }
+                                        tes[0].classList.remove('sorting_asc');
+                                        tes[0].classList.remove('sorting_desc');
+<!--                                    자바스크립트 작업이 끝나면 스피너는 닫고, 데이타 테이블은 보여줘-->
+                                    document.getElementById('jang_spinner').style.display = 'none';
+                                    document.getElementById('dataTable_wrapper').style.display = '';
+                                    var table1 = $('#dataTable').DataTable();
+                                    var buttons = new $.fn.dataTable.Buttons(table1, {
+                                             buttons: [
+
+                                               'excelHtml5',
+
+                                            ]
+                                        }).container().appendTo($('#buttons'));
+                            }
+            });
+    };
+
+    </script>
+    <script type="text/javascript">
+
+         var totaldata = JSON.parse('[]');
+         locations = totaldata;
+                                    for (var i in locations){
+
+                                      var row = `<tr>
+                                                 <td class="tt"><input type="checkbox" name="chk_box" class="checkSelect"/></td>
+                                                 <td class="tt">${locations[i][0]}</td>
+                                                 <td class="tt">${locations[i][1]}</td>
+                                                 <td class="tt">${locations[i][2]}</td>
+                                                 <td class="tt">${locations[i][3]}</td>
+                                                 <td class="tt">${locations[i][4]}</td>
+                                                 <td class="tt">${locations[i][5]}</td>
+                                                 <td class="tt">${locations[i][6]}</td>
+                                                 <td class="tt">${locations[i][7]}</td>
+                                                 <td class="tt">${locations[i][8]}</td>
+                                                 <td class="tt">${locations[i][9]}</td>
+                                                 <td class="tt">${locations[i][10]}</td>
+                                                 <td class="tt">${locations[i][11]}</td>
+                                                 <td class="tt">${locations[i][12]}</td>
+                                                 <td class="tt">${locations[i][13]}</td>
+                                                 <td class="tt">${locations[i][14]}</td>
+                                                 </tr>`
+                                        var table = $('#bodytest')
+                                      table.append(row)
+                                    }
+    </script>
+
+
+
+
+
+
+        <script type="text/javascript">
+           function team1() {
+            var x = document.getElementById("team1").value;
+            $('#team2').empty();
+
+             $.ajax({
+                            type : 'POST',
+                            url : 'http://221.163.1.21/team1',
+                            data : {
+                                    x_py: x
+                            },
+                            dataType : 'JSON',
+                            success : function(result){
+            locations = result[0];
+          var row = `<option value="">법인영업부</option>`
+                                        var table = $('#team2')
+                                      table.append(row)
+                                    for (var i in locations){
+
+
+                                      var row = `
+                                                <option value=${locations[i][0]}>${locations[i][0]}</option>`
+                                        var table = $('#team2')
+                                      table.append(row)
+                                    }
+                            }
+            });
+    };
+    </script>
+        <script type="text/javascript">
+           function team2() {
+            var x = document.getElementById("team2").value;
+            $('#team3').empty();
+             $.ajax({
+                            type : 'POST',
+                            url : 'http://221.163.1.21/team2',
+                            data : {
+                                    x_py: x
+                            },
+                            dataType : 'JSON',
+                            success : function(result){
+        locations = result[0];
+          var row = `<option value="">법인영업팀</option>`
+                                        var table = $('#team3')
+                                      table.append(row)
+                                    for (var i in locations){
+
+
+                                      var row = `
+                                                <option value=${locations[i][0]}>${locations[i][0]}</option>`
+                                        var table = $('#team3')
+                                      table.append(row)
+                                    }
+                            }
+            });
+    };
+    </script>
+    <script type="text/javascript">
+
+         var totaldata = JSON.parse('[["\ub0a8\ubd80\ubc95\uc778\uace0\uac1d1\ub2f4\ub2f9"], ["\ub0a8\ubd80\ubc95\uc778\uace0\uac1d2\ub2f4\ub2f9"], ["\uc11c\ubd80\ubc95\uc778\uace0\uac1d1\ub2f4\ub2f9"], ["\uc11c\ubd80\ubc95\uc778\uace0\uac1d2\ub2f4\ub2f9"]]');
+         locations = totaldata;
+          var row = `<option value="">법인영업담당</option>`
+                                        var table = $('#team1')
+                                      table.append(row)
+                                    for (var i in locations){
+
+
+                                      var row = `
+                                                <option value=${locations[i][0]}>${locations[i][0]}</option>`
+                                        var table = $('#team1')
+                                      table.append(row)
+                                    }
+
+
+    </script>
+
+                    <script type="text/javascript">
+	$(function() {
+		$('#datetimepicker1').datepicker({
+		    format: "yyyy-mm-dd",	//데이터 포맷 형식(yyyy : 년 mm : 월 dd : 일 )
+		    autoclose : true,	//사용자가 날짜를 클릭하면 자동 캘린더가 닫히는 옵션
+		    clearBtn : false, //날짜 선택한 값 초기화 해주는 버튼 보여주는 옵션 기본값 false 보여주려면 true
+		    immediateUpdates: false,	//사용자가 보는 화면으로 바로바로 날짜를 변경할지 여부 기본값 :false
+		    templates : {
+		        leftArrow: '&laquo;',
+		        rightArrow: '&raquo;'
+		    }, //다음달 이전달로 넘어가는 화살표 모양 커스텀 마이징
+		    showWeekDays : true ,// 위에 요일 보여주는 옵션 기본값 : true
+		    todayHighlight : true ,	//오늘 날짜에 하이라이팅 기능 기본값 :false
+		    toggleActive : true,	//이미 선택된 날짜 선택하면 기본값 : false인경우 그대로 유지 true인 경우 날짜 삭제
+		    weekStart : 0 ,//달력 시작 요일 선택하는 것 기본값은 0인 일요일
+		    orientation: 'bottom',
+		    language : "ko"	//달력의 언어 선택, 그에 맞는 js로 교체해줘야한다.
+
+		});//datepicker end
+	});//ready end
+
+</script>
+                    <script type="text/javascript">
+	$(function() {
+		$('#datetimepicker2').datepicker({
+		    format: "yyyy-mm-dd",	//데이터 포맷 형식(yyyy : 년 mm : 월 dd : 일 )
+		    autoclose : true,	//사용자가 날짜를 클릭하면 자동 캘린더가 닫히는 옵션
+		    clearBtn : false, //날짜 선택한 값 초기화 해주는 버튼 보여주는 옵션 기본값 false 보여주려면 true
+		    immediateUpdates: false,	//사용자가 보는 화면으로 바로바로 날짜를 변경할지 여부 기본값 :false
+		    templates : {
+		        leftArrow: '&laquo;',
+		        rightArrow: '&raquo;'
+		    }, //다음달 이전달로 넘어가는 화살표 모양 커스텀 마이징
+		    showWeekDays : true ,// 위에 요일 보여주는 옵션 기본값 : true
+		    todayHighlight : true ,	//오늘 날짜에 하이라이팅 기능 기본값 :false
+		    toggleActive : true,	//이미 선택된 날짜 선택하면 기본값 : false인경우 그대로 유지 true인 경우 날짜 삭제
+		    weekStart : 0 ,//달력 시작 요일 선택하는 것 기본값은 0인 일요일
+		    orientation: 'bottom',
+		    language : "ko"	//달력의 언어 선택, 그에 맞는 js로 교체해줘야한다.
+
+		});//datepicker end
+	});//ready end
+
+</script>
+    <script type="text/javascript">
+           function report1() {
+            var s = document.getElementsByClassName('checkSelect')
+                let line = new Array(s.length)
+               for(var i=0;i<s.length;i++)
+               {
+                   if(s[i].checked==true)
+                   {
+                       var v = i*16 + 4;
+                       var t = document.getElementsByTagName('td')[v].innerText;
+                       console.log(t);
+                       line[i] = t;
+                   }
+               }
+            var o = document.getElementsByClassName('jang_options')
+                let opt = new Array(o.length)
+            var p = document.getElementsByClassName('jang_options2')
+               for(var i=0;i<o.length;i++)
+               {
+                   if(p[i].checked==true)
+                   {
+                       opt[i] = o[i].innerText;
+                   }
+               }
+            var date1 = document.getElementById('datetimepicker1').value
+            var date2 = document.getElementById('datetimepicker2').value
+               console.log(line);
+                var jsonString = JSON.stringify(line);
+                var jsonString2 = JSON.stringify(opt);
+                console.log(opt);
+             $.ajax({
+                            type : 'POST',
+                            url : 'http://221.163.1.21/report1',
+                            data : {
+                                    line_t: jsonString,
+                                    date1: date1,
+                                    date2: date2,
+                                    opt: jsonString2
+                            },
+                            dataType : 'JSON',
+                            success : function(result){
+                                if(result[0]=='empty')
+                                {
+                                    console.log('empty')
+                                }
+                                else
+                                {alert("요청이 완료되었습니다.")}
+
+                            }
+            });
+    };
+
+    </script>
+    <script type="text/javascript">
+           function modal1() {
+
+
+             $("#jang_report").empty();
+             $.ajax({
+                            type : 'POST',
+                            url : 'http://221.163.1.21/report',
+                            data : {
+                                    id: 'id'
+                            },
+                            dataType : 'JSON',
+                            success : function(result){
+                                    locations = result[0]
+                                    var s = document.getElementsByClassName('btn btn-primary btn-secondary')
+                                    for (var i in locations){
+                                      //Keep in mind we are using "Template Litterals to create rows"
+
+                                      var row = `<tr>
+                                                 <td>${locations[i][0]}</td>
+                                                 <td>${locations[i][1]}</td>
+                                                 <td>${locations[i][2]}</td>
+                                                 <td><a class="btn btn-primary btn-secondary">다운로드</a></td>
+                                                 </tr>`
+                                        var table = $('#jang_report')
+                                      table.append(row)
+                                      s[i].href = "/download/"+locations[i][3]
+                                      console.log(s[i].href)
+                                    }
+
+
+                            }
+            });
+            $("#reportModal").modal("show");
+    };
+
+    </script>
+    <script>
+
+    </script>
+    </body>
+</html>
