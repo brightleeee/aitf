@@ -21,7 +21,8 @@
     <!-- MetisMenu CSS -->
     <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+    <!-- C
+    ustom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="../static/dist/css/yeon.css" rel="stylesheet">
     <!-- Morris Charts CSS -->
@@ -59,7 +60,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand dohyeon" href="index.html" style="font-size: 25px; padding: 0px 40px;">KT AI P-TF 1조</a>
+                <a class="navbar-brand dohyeon" href="index4.html" style="font-size: 25px; padding: 0px 40px;">KT AI P-TF 1조</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -90,7 +91,7 @@
                     <ul class="nav" id="side-menu">
 
                         <li>
-                            <a href="index.html"><i class="fa fa-lightbulb-o fa-fw"></i> 설계</a>
+                            <a href="index4.html"><i class="fa fa-lightbulb-o fa-fw"></i> 설계</a>
                         </li>
 <!--                        <li>-->
 <!--                            <a href="index2.html"><i class="glyphicon glyphicon-search"></i> &nbsp;설계 상세</a>-->
@@ -99,7 +100,7 @@
                             <a><i class="glyphicon glyphicon-search"></i> &nbsp;설계 상세</a>
                         </li>
                         <li>
-                            <a href="index3.html"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;시설 현황</a>
+                            <a href="index5.html"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;시설 현황</a>
                         </li>
 <!--                        <li>-->
 <!--                            <a href="index4.html"><i class="glyphicon glyphicon-list-alt"></i> 　</a>-->
@@ -361,7 +362,7 @@
                                     <p>
                                         <h3>ATACAMA Link</h3>
                                         <button class="btn btn-info" style="margin: -4px">
-                                            <a href="https://now.kt.co.kr/dsn/map" onclick="window.open(this.href); return false" style="color: #ffffff;">Link to ATACAMA</a>
+                                            <a href="https://now.kt.co.kr/sdn/map" onclick="window.open(this.href); return false" style="color: #ffffff;">Link to ATACAMA</a>
                                         </button>
                                     </p>
                         </div>
@@ -372,8 +373,43 @@
 
             </div>
 
-<!--            <div id="chart_div" style="width: 900px; height: 500px;">차트 위치~</div>-->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Scatter Chart
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body text-center">
+                            <!-- Tab panes -->
+                            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
 
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
+
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Blah,,
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body text-center" style="padding: 20px;">
+<!--                            <div id="chartContainer2" style="height: 370px; width: 100%;"></div>-->
+<!--                                    <h4>Home Tab</h4>-->
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
+            </div>
+
+</div>
 
 
 
@@ -412,6 +448,7 @@
         crossorigin="anonymous"></script>
 <script src="js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
     <script type="text/javascript">
             var result;
 
@@ -493,6 +530,7 @@
                             dataType : 'JSON',
                             success : function(result)
                                 {
+                                console.log(result[1])
                                 var locations = result
                                 var locations2 =[
                                                 ['Ag2222e', 'Weight'],
@@ -500,6 +538,8 @@
                                                 [3, 3.5],
                                                 [6.5, 7]];
                                 console.log(locations2[0])
+<!--                                 for (var i in locations){-->
+<!--                                              console.log([locations[i][0], locations[i][1]])}-->
 
                                  google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
@@ -550,6 +590,110 @@
     </script>
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
+window.onload = function()
+        {
+        var dataPoints = [];
+        var result;
+        console.log("1차 통과")
+        var param1 = document.getElementById('param1').value
+        var param2 = document.getElementById('param2').value
+        var param3 = document.getElementById('param3').value
+        var param4 = document.getElementById('param4').value
+        var param5 = document.getElementById('param5').value
+        var param6 = document.getElementById('param6').value
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+<!--            title: {-->
+<!--                text: "Rendering Chart with dataPoints from External JSON"-->
+<!--            },-->
+             axisX:{
+               viewportMaximum: 100000
+             },
+            data: [{
+                type: "scatter",
+<!--                color: "red",-->
+                dataPoints: dataPoints,
+            }]
+        });
+        $.ajax({
+                    type: 'POST',
+                    url: 'http://127.0.0.1:5000/test2',
+                    data: {
+                        itemid1: param1,
+                        itemid2: param2,
+                        itemid3: param3,
+                        itemid4: param4,
+                        itemid5: param5,
+                        itemid6: param6
+                    },
+                    dataType: 'JSON',
+                    success: function(result)
+                                {
+                                console.log(result[1])
+                                $.each(result, function(key, value)
+                                        {
+                                        dataPoints.push({
+                                            x: value[0],
+                                            y: value[1]
+                                            });
+                                        console.log(value[0])
+
+                                        });
+                                chart.render();
+
+                                }
+                })
+
+
+}
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+<!--var chart = new CanvasJS.Chart("chartContainer", {-->
+<!--	animationEnabled: true,-->
+<!--	title:{-->
+<!--		text: "Server Performance"-->
+<!--	},-->
+<!--	axisX: {-->
+<!--		title:"Server Load (in TPS)"-->
+<!--	},-->
+<!--	axisY:{-->
+<!--		title: "Response Time (in ms)",-->
+<!--		includeZero: true-->
+<!--	},-->
+<!--	data: [{-->
+<!--		type: "scatter",-->
+<!--		toolTipContent: "<span style=\"color:#4F81BC \"><b>{name}</b></span><br/><b> Load:</b> {x} TPS<br/><b> Response Time:</b></span> {y} ms",-->
+<!--		name: "Server Pluto",-->
+<!--		showInLegend: true,-->
+<!--		dataPoints: [-->
+<!--			{ x: 23, y: 330 },-->
+<!--			{ x: 28, y: 390 },-->
+
+<!--		]-->
+<!--	},-->
+<!--	{-->
+<!--		type: "scatter",-->
+<!--		name: "Server Mars",-->
+<!--		showInLegend: true,-->
+<!--		toolTipContent: "<span style=\"color:#C0504E \"><b>{name}</b></span><br/><b> Load:</b> {x} TPS<br/><b> Response Time:</b></span> {y} ms",-->
+<!--		dataPoints: [-->
+<!--			{ x: 19, y: 200 },-->
+<!--			{ x: 27, y: 300 },-->
+<!--			{ x: 30, y: 50 },-->
+
+<!--		]-->
+<!--	}]-->
+<!--});-->
+<!--chart.render();-->
+
+
+
 
 </body>
 
