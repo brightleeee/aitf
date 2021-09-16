@@ -5,12 +5,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sqlite3
 import sys
-
+import numpy as np
 from predict_ca import model
 from predict_ca import train_stats
+from predict_ca_bm_cho import model2
+from predict_ca_bm_cho import train_stats2
 import tensorflow as tf
+import predict_ca_bm_cho as precho
+
 from tensorflow import keras
 from tensorflow.keras import layers
+import math
 
 app = Flask(__name__)
 
@@ -133,21 +138,40 @@ def languages():
     # print(type(chart_value[0][0]))
 
     # 모델링 샘플..
-    x_test = [[int(value1), int(value2[0]), int(value3[0])]]
-    print(x_test)
-    # x_test = pd.DataFrame(x_test, columns=['연면적', '세대수'])
-    x_test = pd.DataFrame(x_test, columns=['연면적', '최대층수', '최저층수'])
-    model = tf.keras.models.load_model('model_v0.h5')
-    model.summary()
+    if value5 == "빌딩":
+        x_test = [[int(value1), int(value2), int(value3)]]
+        print(x_test)
+        # x_test = pd.DataFrame(x_test, columns=['연면적', '세대수'])
+        x_test = pd.DataFrame(x_test, columns=['연면적', '최대층수', '최저층수'])
+        model = tf.keras.models.load_model('model_v0.h5')
+        model.summary()
 
-    def norm(x):
-        return (x - train_stats['mean']) / train_stats['std']
+        def norm(x):
+            return (x - train_stats['mean']) / train_stats['std']
 
-    normed_x_test = norm(x_test)
-    y_predict = model.predict(normed_x_test).tolist()
-    print(y_predict[0])
+        normed_x_test = norm(x_test)
+        y_predict = np.round(model.predict(normed_x_test), 0).tolist()
+        print(y_predict)
+        print(y_predict[0])
 
-    return jsonify(rows, chart_value[0], int(y_predict[0]))
+    elif value5 == "주상복합":
+        x_test = [[int(value1), int(value2), int(value3), int(value6)]]
+        print(x_test)
+        print(value6)
+        # x_test = pd.DataFrame(x_test, columns=['연면적', '세대수'])
+        x_test = pd.DataFrame(x_test, columns=['연면적', '최대층수', '최저층수', '세대수'])
+        model2 = tf.keras.models.load_model('model_v0_cho.h5')
+        model2.summary()
+
+        def norm2(x):
+            return (x - train_stats2['mean']) / train_stats2['std']
+
+        normed_x_test = norm2(x_test)
+        y_predict = np.round(model2.predict(normed_x_test), 0).tolist()
+        print(y_predict)
+        print(y_predict[0])
+
+    return jsonify(rows, chart_value[0], y_predict[0])
 
 
 @app.route("/test2", methods=["POST"])

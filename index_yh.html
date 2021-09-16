@@ -255,20 +255,20 @@
                 <div class="col-lg-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            결과
+                            설계 결과
                         </div>
-                        <div class="panel-body text-center">
+                        <div class="panel-body text-center" style="height: 205px;">
 
 
-                                    <h3 class="text-light">BM별 서비스 용량</h3>
-                                    <h3 class="text-light">
+                                    <h4 class="text-light">BM별 서비스 용량</h4>
+                                    <h4 class="text-light">
                                         <span class="quiz-text">
                                             : 산출 결과
                                         </span>
                                         <span class="quiz-text2">
                                             　
                                         </span>
-                                    </h3>
+                                    </h4>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -289,11 +289,11 @@
                 <div class="col-lg-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Go To ATACAMA
+                            공사비 산출
                         </div>
-                        <div class="panel-body text-center" style="padding: 20px;">
+                        <div class="panel-body text-center" style="height: 205px;">
                                     <p>
-                                        <h3>ATACAMA Link</h3>
+                                        <h4>ATACAMA Link</h4>
                                         <button class="btn btn-info" style="margin: -4px; background-color: #593cc1; border-color: #593cc1;">
                                             <a href="https://now.kt.co.kr/dsn/map" onclick="window.open(this.href); return false" style="color: #ffffff;">Link to ATACAMA</a>
                                         </button>
@@ -430,6 +430,7 @@
                                                       ]).draw();
                                         }
                                 console.log(result[1])
+                                console.log(result[2])
                                 console.log('comp')
 
                                 var ctx = document.getElementById("myPieChart");
@@ -443,6 +444,10 @@
                                         }],
                                     },
                                 });
+                                let x = document.getElementsByClassName("quiz-text")[0];
+                                x.innerText=result[2];
+                                x.style.color="red";
+
                             }
             });
             };
@@ -454,7 +459,7 @@
 <script type="text/javascript">
         function changeByJS() {
             let x = document.getElementsByClassName("quiz-text")[0];
-            x.innerText="7코어";
+            x.innerText="Calculating...";
             x.style.color="red";
     }
 </script>
