@@ -1,4 +1,3 @@
-                                                          <!-- 메인 페이지 -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -12,183 +11,69 @@
 
     <title>KT AI P-TF</title>
 
-
-
-
     <!-- Bootstrap Core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <!-- MetisMenu CSS -->
-    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- C
-    ustom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-    <link href="../static/dist/css/yeon.css" rel="stylesheet">
-    <!-- Morris Charts CSS -->
-    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="../static/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="../static/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../static/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../static/dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href=https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css rel="stylesheet">
-    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <style type="text/css">
-        .dohyeon { font-family: 'Noto Sans KR', sans-serif; }
+        .dohyeon {font-family: 'Noto Sans KR', sans-serif;}
+        .jua {font-family: 'Jua', sans-serif;}
+        .test1 {font-size:30px; display:none;}
     </style>
 
+
+        <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <div id="wrapper">
 
-        <!-- Navigation, margin-top 이용해서 navbar 위 아래 넓이 맞추기 -->
+        <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-top: 35px">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand dohyeon" href="index4.html" style="font-size: 25px; padding: 0px 40px;">KT AI P-TF 1조</a>
-            </div>
-            <!-- /.navbar-header -->
-
-            <ul class="nav navbar-top-links navbar-right">
-
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="../../../templates/login_test.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
+                <span>
+                    <div style="position:absolute; top:-15px; left:30px;">
+                    <img src="../static/img/ktci2.png" alt="My Image" width=auto; height="50">
+                    </div>
+                </span>
+                <a class="navbar-brand dohyeon" href="http://127.0.0.1:5000/" style="font-size: 25px; padding: 0px 120px;">OSP 시설분석을 통한 인입광케이블 예측설계　</a>
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-
+                         <li>
+                             <a href="http://127.0.0.1:5000/" style="font-size: 17px; color: #5a5a5a;"><i class="bi-lightbulb"></i> &nbsp;&nbsp;신축건물 인입광 설계</a>
                         <li>
-                            <a href="index4.html"><i class="fa fa-lightbulb-o fa-fw"></i> 설계</a>
+                            <a href="index4.html" style="font-size: 17px; color: #5a5a5a;"><i class="glyphicon glyphicon-search"></i> &nbsp;&nbsp;기축건물 시설현황</a>
                         </li>
-<!--                        <li>-->
-<!--                            <a href="index2.html"><i class="glyphicon glyphicon-search"></i> &nbsp;설계 상세</a>-->
-<!--                        </li>-->
-                        <li>
-                            <a><i class="glyphicon glyphicon-search"></i> &nbsp;설계 상세</a>
-                        </li>
-                        <li>
-                            <a href="index5.html"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;시설 현황</a>
-                        </li>
-<!--                        <li>-->
-<!--                            <a href="index4.html"><i class="glyphicon glyphicon-list-alt"></i> 　</a>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a><i class="glyphicon glyphicon-list-alt"></i> ▼기능▼</a>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="forms.html"><i class="glyphicon glyphicon-list-alt"></i> Forms</a>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>-->
-<!--                            <ul class="nav nav-second-level">-->
-<!--                                <li>-->
-<!--                                    <a href="flot.html">Flot Charts</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="morris.html">Morris.js Charts</a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                            &lt;!&ndash; /.nav-second-level &ndash;&gt;-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>-->
-<!--                            <ul class="nav nav-second-level">-->
-<!--                                <li>-->
-<!--                                    <a href="panels-wells.html">Panels and Wells</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="buttons.html">Buttons</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="notifications.html">Notifications</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="typography.html">Typography</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="icons.html"> Icons</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="grid.html">Grid</a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                            &lt;!&ndash; /.nav-second-level &ndash;&gt;-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Drops<span class="fa arrow"></span></a>-->
-<!--                            <ul class="nav nav-second-level">-->
-<!--                                <li>-->
-<!--                                    <a href="#">Second Level Item</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="#">Second Level Item</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="#">Third Level <span class="fa arrow"></span></a>-->
-<!--                                    <ul class="nav nav-third-level">-->
-<!--                                        <li>-->
-<!--                                            <a href="#">Third Level Item</a>-->
-<!--                                        </li>-->
-<!--                                        <li>-->
-<!--                                            <a href="#">Third Level Item</a>-->
-<!--                                        </li>-->
-<!--                                        <li>-->
-<!--                                            <a href="#">Third Level Item</a>-->
-<!--                                        </li>-->
-<!--                                        <li>-->
-<!--                                            <a href="#">Third Level Item</a>-->
-<!--                                        </li>-->
-<!--                                    </ul>-->
-<!--                                    &lt;!&ndash; /.nav-third-level &ndash;&gt;-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                            &lt;!&ndash; /.nav-second-level &ndash;&gt;-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>-->
-<!--                            <ul class="nav nav-second-level">-->
-<!--                                <li>-->
-<!--                                    <a href="blank.html">Blank Page</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="http://127.0.0.1:5000/templates/login_test.html">Login Page</a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                            &lt;!&ndash; /.nav-second-level &ndash;&gt;-->
-<!--                        </li>-->
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -198,267 +83,558 @@
 
         <div id="page-wrapper" style="margin: -20px 0 0 250px;">
             <div class="row">
-
                 <div class="col-lg-12">
-                    <h3 class="page-header dohyeon" style="margin: 20px 0 20px;">설계 Page</h3>
+                    <br>
+<!--                    <h3 class="page-header dohyeon" style="margin: 20px 0 20px;">시설 현황</h3>-->
                 </div>
-
+                <!-- /.col-lg-12 -->
             </div>
-            <!-- 내용 -->
+
+
             <div class="row">
-                   <div class="panel panel-default">
-                        <div class="panel-heading">
-                            입력
+                <div class="panel panel-default">
+                    <!--<div class="panel-heading">                         　
+                    </div> -->
+                    <br>
+                    <div class="panel-body">
+                        <section class="search-sec">
+                            <div action="#" method="post" novalidate="novalidate">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail1" style="font-size:17px">본부</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail2" style="font-size:17px">지사</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail3" style="font-size:17px">지점</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail3" style="font-size:17px">국사</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="g1">
+                                                        <option>강남고객본부</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="g2" onchange="gg2()">
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="g3" onchange="gg3()">
+                                                        <option>선택하세요</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="g4">
+                                                        <option>선택하세요</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <p style="margin-top:5px;">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 col-sm-12">
+<!--                                                    <button type="button" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;">검색-->
+<!--                                                    </button>-->
+<!--                                                    <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;">Reset-->
+<!--                                                    </button>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <br>
+                                <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail1" style="font-size:17px">특별시/도</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail2" style="font-size:17px">시/군/구</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail3" style="font-size:17px">읍/면/동</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail3" style="font-size:17px">번지</label>
+                                                </div>
+                                                <!-- <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail3" style="font-size:17px">BM 구분</label>
+                                                </div> -->
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="add1">
+                                                        <option>경기도</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="add2" onchange="add2()">
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="add3">
+                                                        <option>선택하세요</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <input type="text" class="form-control search-slt" placeholder="예) 45" id="param1">
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12" id="nope">
+                                                        <select class="form-control search-slt" id="param2">
+                                                        <option>시설 구분</option>
+                                                        <option>초고속</option>
+                                                        <option>광전화</option>
+                                                        <option>전용</option>
+                                                        <option>기타</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <p style="margin-top:5px;">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 col-sm-12">
+                                                    <button type="button" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1; font-size:17px;" onclick="btn_click3()">검색
+                                                    </button>
+                                                    <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1; font-size:17px;">Reset
+                                                    </button>
+<!--                                                    <button type="button" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1; font-size:17px;" id="excel">Excel 저장-->
+<!--                                                    </button>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+
+<!--            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                            주소 검색 (지번)
+                    </div>
+                    <div class="panel-body">
+                        <section class="search-sec">
+                            <div action="#" method="post" novalidate="novalidate">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail1">특별시/도</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail2">시/군/구</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail3">읍/면/동</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail3">번지</label>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <label class="text-white" for="inputEmail3">BM 구분</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="add1">
+                                                        <option>경기도</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="add2" onchange="add2()">
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="add3">
+                                                        <option>선택하세요</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <input type="text" class="form-control search-slt" placeholder="예) 45" id="param1">
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-12">
+                                                    <select class="form-control search-slt" id="param2">
+                                                        <option>시설 구분</option>
+                                                        <option>초고속</option>
+                                                        <option>광전화</option>
+                                                        <option>전용</option>
+                                                        <option>기타</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <p style="margin-top:5px;">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 col-sm-12">
+                                                    <button type="button" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;" onclick="btn_click3()">검색
+                                                    </button>
+                                                    <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;">Reset
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <br>
+
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- ★★파이차트★★ -->
+            <div class="row">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="font-size:18px; background-color: #B9AFF9; border-color: #B9AFF9;">
+                            지역별 시설 분포
                         </div>
                         <div class="panel-body">
-
-
-    <section class="search-sec">
-        <form action="#" method="post" novalidate="novalidate">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail1">연면적</label>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail2">최고 층 수</label>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail2">최저 층 수</label>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail3">지역</label>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail3">건물 유형</label>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail3">세대 수</label>
-                        </div>
-<!--                        <div class="col-lg-2 col-md-2 col-sm-12">-->
-<!--                            <label class="text-white" for="inputEmail3">구분</label>-->
-<!--                        </div>-->
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-2 col-md-2 col-sm-12 pt-0">
-                            <input type="number" class="form-control search-slt" placeholder="예) 1350"
-                                   id="param1" style="width: 100%;">
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <input type="number" class="form-control search-slt" placeholder="예) 7"
-                                   id="param2" style="width: 100%;">
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <input type="number" class="form-control search-slt" placeholder="예) 7"
-                                   id="param3" style="width: 100%;">
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <select class="form-control search-slt" id="param4">
-                                <option>선택하세요</option>
-                                <option>도심</option>
-                                <option>농촌</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <select class="form-control search-slt" id="param5">
-                                <option>선택하세요</option>
-                                <option>주상복합</option>
-                                <option>빌딩</option>
-                                <option>상가</option>
-                                <option>오피스텔</option>
-
-                            </select>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <input type="number" class="form-control search-slt" placeholder="예) 45" id="param6">
-                        </div>
-                    </div>
-                    <p style="margin-top:5px;">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-12">
-                            <button type="button" class="btn btn-info" onclick="btn_click2();btn_click3();changeByJS();changeByJS22();" style="padding: 8px 15px;">산출
-                            </button>
-                            <button type="reset" class="btn btn-info">Reset
-                            </button>
-<!--                            <button type="button" class="btn btn-danger wrn-btn" onclick="btn_click2();">Excel-->
-<!--                            </button>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </form>
-    </section>
-
+                            <div class="card-body row">
+                                    <div class="col-lg-3">
+                                        <canvas id="myPieChart"></canvas>
+                                        <br>
+                                        <p style="text-align:center; font-size:16px;" id="a1" class="test" >광주시 오포읍 신현리</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <canvas id="myPieChart2"></canvas>
+                                        <br>
+                                        <p style="text-align:center; font-size:16px;" id="a2" class="test">성남시 분당구 백현동</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <canvas id="myPieChart3"></canvas>
+                                        <br>
+                                        <p style="text-align:center; font-size:16px;" id="a3" class="test">성남시 분당구 판교동</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <canvas id="myPieChart4"></canvas>
+                                        <br>
+                                        <p style="text-align:center; font-size:16px;" id="a4" class="test">성남시 분당구 삼평동</p>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <p style="text-align:center;" id="a5" class="test1 jua">No result</p>
+                                    </div>
+                            </div>
                         </div>
                     </div>
             </div>
 
-                <p>
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
-                aria-expanded="true" aria-controls="collapseExample">
-            더보기
-        </button>
-    </p>
-    <div class="collapse" id="collapseExample">
-        <div class="card card-body">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample" style="color: #593cc1; background-color: #ffffff; border-color: #593cc1; font-size:17px;">
+                                결과 확인</button>
+            <!-- <button class="btn btn-primary" type="button" onclick="btn_click2();" style="color: #593cc1; background-color: #ffffff; border-color: #593cc1;">전체 검색</button> -->
 
-                <table id="tableData" class="table">
-        <thead id="head">
-        <tr>
-            <th scope="col">순번</th>
-            <th scope="col" style="width: 10%">건물명</th>
-            <th scope="col">건물유형</th>
-            <th scope="col">연면적</th>
-            <th scope="col">최고 층 수</th>
-            <th scope="col">최저 층 수</th>
-            <th scope="col">지역</th>
-            <th scope="col">세대수</th>
-            <th scope="col" style="width: 25%">주소</th>
-            <th scope="col">인입광</th>
-        </tr>
-        </thead>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <table id="tableData" class="table">
+                        <thead id="head">
+                        <tr>
+                            <th scope="col">순번</th>
+                            <th scope="col" style="width: 10%">건물명</th>
+                            <th scope="col">건물유형</th>
+                            <th scope="col">연면적(㎡)</th>
+                            <th scope="col">최고 층 수</th>
+                            <th scope="col">최저 층 수</th>
+                            <!-- <th scope="col">지역</th> -->
+                            <th scope="col">세대수</th>
+                            <th scope="col" style="width: 25%">주소</th>
+                            <th scope="col">총 코어 수</th>
+                            <th scope="col">운용 코어 수</th>
+                            <th scope="col">초고속</th>
+                            <th scope="col">광전화</th>
+                            <th scope="col">전용</th>
+                            <th scope="col">무선</th>
 
-    </table>
 
-        </div>
-    </div>
+                        </tr>
+                        </thead>
+                    </table>
 
-<br>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            서비스 용량
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body text-center">
-                            <!-- Tab panes -->
-                                    <h3 class="text-light">총 코어 수 (초고속/무선/전용/광전화)</h3>
-                                    <h3 class="text-light">
-                                        <span class="quiz-text">
-                                            : 산출 결과
-                                        </span>
-                                        <span class="quiz-text2">
-                                            　
-                                        </span>
-                                    </h3>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
                 </div>
-
-
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            투자비 산출
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body text-center" style="padding: 20px;">
-<!--                                    <h4>Home Tab</h4>-->
-                                    <p>
-                                        <h3>ATACAMA Link</h3>
-                                        <button class="btn btn-info" style="margin: -4px">
-                                            <a href="https://now.kt.co.kr/sdn/map" onclick="window.open(this.href); return false" style="color: #ffffff;">Link to ATACAMA</a>
-                                        </button>
-                                    </p>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-
             </div>
 
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Scatter Chart
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body text-center">
-                            <!-- Tab panes -->
-                            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-
-
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Blah,,
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body text-center" style="padding: 20px;">
-<!--                            <div id="chartContainer2" style="height: 370px; width: 100%;"></div>-->
-<!--                                    <h4>Home Tab</h4>-->
-
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-
-            </div>
-
-</div>
+            <br>
 
 
 
-                    </div>
-                </div>
 
-            </div>
-
-        </div>
-
-    </div>
 
     <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="../static/vendor/metisMenu/metisMenu.min.js"></script>
 
-    <!-- Morris Charts JavaScript -->
-    <script src="../vendor/raphael/raphael.min.js"></script>
-    <script src="../vendor/morrisjs/morris.min.js"></script>
-    <script src="../data/morris-data.js"></script>
+    <!-- DataTables JavaScript -->
+    <script src="../static/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../static/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../static/vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.bootstrap4.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.print.min.js"></script>
+
+
+<!--    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+
 
     <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    <script src="../static/dist/js/sb-admin-2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
-<script src="js/jquery.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script src="../static/vendor/jquery/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+
     <script type="text/javascript">
+    document.getElementById("nope").style.display = 'none'
+    </script>
+
+    <script type="text/javascript">
+
+         var totaldata = JSON.parse('{{ add2 | tojson | safe}}');
+         locations = totaldata;
+         console.log('totaldata');
+         console.log(totaldata);
+          var row = `<option value="">선택하세요</option>`
+                                        var table = $('#add2')
+                                      table.append(row)
+                                    for (var i in locations){
+
+                                        console.log(locations[i][0])
+                                      var row = `
+                                                <option value="${locations[i][0]}">${locations[i][0]}</option>`
+                                        var table = $('#add2')
+                                      table.append(row)
+                                    }
+
+        var list1 = JSON.parse('{{ list_chart1 | tojson | safe}}');
+        console.log(list1)
+        var ctx = document.getElementById("myPieChart");
+            var myPieChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ["무선", "광전화", "전용", "초고속" ],
+                datasets: [{
+                  data: list1,
+                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
+                }],
+              },
+            });
+
+        var list2 = JSON.parse('{{ list_chart2 | tojson | safe}}');
+        console.log(list2)
+        var ctx = document.getElementById("myPieChart2");
+            var myPieChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ["무선", "광전화", "전용", "초고속" ],
+                datasets: [{
+                  data: list2,
+                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
+                }],
+              },
+            });
+
+
+
+
+        var list3 = JSON.parse('{{ list_chart3 | tojson | safe}}');
+        console.log(list3)
+        var ctx = document.getElementById("myPieChart3");
+            var myPieChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ["무선", "광전화", "전용", "초고속" ],
+                datasets: [{
+                  data: list3,
+                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
+                }],
+              },
+            });
+
+
+
+        var list4 = JSON.parse('{{ list_chart4 | tojson | safe}}');
+        console.log(list4)
+        var ctx = document.getElementById("myPieChart4");
+            var myPieChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ["무선", "광전화", "전용", "초고속" ],
+                datasets: [{
+                  data: list4,
+                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
+                }],
+              },
+            });
+
+    </script>
+
+
+                           <!--
+
+                           <script type="text/javascript">
+            var ctx = document.getElementById("myPieChart2");
+            var myPieChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ["초고속", "광전화", "전용", "무선"],
+                datasets: [{
+                  data: [12.21, 15.58, 11.25, 8.32],
+                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
+                }],
+              },
+            });
+        </script>
+
+
+        <script type="text/javascript">
+            var ctx = document.getElementById("myPieChart3");
+            var myPieChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ["초고속", "광전화", "전용", "무선"],
+                datasets: [{
+                  data: [12.21, 15.58, 11.25, 8.32],
+                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
+                }],
+              },
+            });
+        </script>
+
+        <script type="text/javascript">
+            var ctx = document.getElementById("myPieChart4");
+            var myPieChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ["초고속", "광전화", "전용", "무선"],
+                datasets: [{
+                  data: [12.21, 15.58, 11.25, 8.32],
+                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
+                }],
+              },
+            });
+        </script> -->
+
+    <script type="text/javascript">
+           function add2() {
+            var x = document.getElementById("add2").value;
+            $('#add3').empty();
+            console.log('test')
+             $.ajax({
+                            type : 'POST',
+                            url : 'http://127.0.0.1:5000/add',
+                            data : {
+                                    x_py: x
+                            },
+                            dataType : 'JSON',
+                            success : function(result){
+            locations = result[0];
+          var row = `<option value="">선택하세요</option>`
+                                        var table = $('#add3')
+                                      table.append(row)
+                                    for (var i in locations){
+
+                                      console.log(locations[i][0])
+                                      var row = `
+                                                <option value="${locations[i][0]}">${locations[i][0]}</option>`
+                                        var table = $('#add3')
+                                      console.log(row)
+                                      table.append(row)
+                                    }
+                            }
+            });
+    };
+    </script>
+
+
+    <script type="text/javascript">
+           function add22() {
+            var x = document.getElementById("add22").value;
+            $('#add33').empty();
+            console.log('test')
+             $.ajax({
+                            type : 'POST',
+                            url : 'http://127.0.0.1:5000/add',
+                            data : {
+                                    x_py: x
+                            },
+                            dataType : 'JSON',
+                            success : function(result){
+            locations = result[0];
+          var row = `<option value="">선택하세요</option>`
+                                        var table = $('#add33')
+                                      table.append(row)
+                                    for (var i in locations){
+
+
+                                      var row = `
+                                                <option value=${locations[i][0]}>${locations[i][0]}</option>`
+                                        var table = $('#add33')
+                                      table.append(row)
+                                    }
+                            }
+            });
+    };
+    </script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+    </script>
+
+
+<!--        <script type="text/javascript">
+            var ctx = document.getElementById("myPieChart");
+            var myPieChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ["초고속", "광전화", "전용", "무선"],
+                datasets: [{
+                  data: [12.21, 15.58, 11.25, 8.32],
+                  backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
+                }],
+              },
+
+            });
+        </script> -->
+
+
+
+<!--        <script type="text/javascript">
             var result;
 
             function btn_click2() {
             console.log("1차 통과")
-            var param1 = document.getElementById('param1').value
-            var param2 = document.getElementById('param2').value
-            var param3 = document.getElementById('param3').value
-            var param4 = document.getElementById('param4').value
-            var param5 = document.getElementById('param5').value
+            var param1 = document.getElementById('add1').value
+            var param2 = document.getElementById('add2').value
+            var param3 = document.getElementById('add3').value
+            var param4 = document.getElementById('param1').value
+            var param5 = document.getElementById('param2').value
             var param6 = document.getElementById('param6').value
 
                                                 var t = $('#tableData').DataTable().destroy();
@@ -479,220 +655,254 @@
             console.log("2차 통과")
             $.ajax({
                             type : 'POST',
-                            url : 'http://127.0.0.1:5000/test',
-                            data : {
-                                    itemid1:param1,
-                                    itemid2:param2,
-                                    itemid3:param3,
-                                    itemid4:param4,
-                                    itemid5:param5,
-                                    itemid6:param6
-                            },
-                            dataType : 'JSON',
-                            success : function(result)
-                                {
-                                var locations = result
-
-                                        for (var i in locations){
-                                              t.row.add(
-                                                     [locations[i][0], locations[i][3], locations[i][5], locations[i][7],
-                                                      locations[i][8],locations[i][9],locations[i][10],locations[i][11],
-                                                      locations[i][12],locations[i][14]]).draw();
-                                        }
-                                }
-                    });
-    }
-
-
-</script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-            var result;
-            function btn_click3() {
-            console.log("1차 통과")
-            var param1 = document.getElementById('param1').value
-            var param2 = document.getElementById('param2').value
-            var param3 = document.getElementById('param3').value
-            var param4 = document.getElementById('param4').value
-            var param5 = document.getElementById('param5').value
-            var param6 = document.getElementById('param6').value
-            $.ajax({
-                            type : 'POST',
                             url : 'http://127.0.0.1:5000/test2',
                             data : {
                                     itemid1:param1,
                                     itemid2:param2,
                                     itemid3:param3,
                                     itemid4:param4,
-                                    itemid5:param5,
+                                    itemid5:param5
                                     itemid6:param6
-                            },
+                                    },
                             dataType : 'JSON',
                             success : function(result)
                                 {
-                                console.log(result[1])
                                 var locations = result
-                                var locations2 =[
-                                                ['Ag2222e', 'Weight'],
-                                                [4, 5],
-                                                [3, 3.5],
-                                                [6.5, 7]];
-                                console.log(locations2[0])
-<!--                                 for (var i in locations){-->
-<!--                                              console.log([locations[i][0], locations[i][1]])}-->
+                                        console.log(locations);
+                                        console.log(locations[0][0]);
+                                        for (var i in locations){
+                                              t.row.add(
+                                                     [locations[i][0], locations[i][1], locations[i][2], locations[i][3],
+                                                      locations[i][4],locations[i][5],locations[i][6],locations[i][7],
+                                                      locations[i][8],locations[i][9]]).draw();
+                                        }
 
-                                 google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-<!--        var data = google.visualization.arrayToDataTable([{'Age': 'Weight'}, result]);-->
-        console.log(result)
-        var data = google.visualization.arrayToDataTable(locations2);
-
-
-
-          console.log("아하?")
-        var options = {
-<!--          title: 'Age vs. Weight comparison',-->
-          hAxis: {minValue: 0, maxValue: 20},
-          vAxis: {title: 'Weight', minValue: 0, maxValue: 20},
-          legend: 'none'
-        };
-
-        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
-
-        chart.draw(data, options);
-      }
                                 }
                     });
+            }
+        </script> -->
+
+        <script type="text/javascript">
 
 
+            function btn_click3() {
+
+            var grapharea= document.getElementById("myPieChart").getContext("2d");
+            if(window.bar != undefined)
+                window.bar.destroy();
+                window.bar = new Chart(grapharea, {});
+
+            var grapharea= document.getElementById("myPieChart2").getContext("2d");
+            if(window.bar != undefined)
+                window.bar.destroy();
+                window.bar = new Chart(grapharea, {});
+
+            var grapharea= document.getElementById("myPieChart3").getContext("2d");
+            if(window.bar != undefined)
+                window.bar.destroy();
+                window.bar = new Chart(grapharea, {});
+
+            var grapharea= document.getElementById("myPieChart4").getContext("2d");
+                if(window.bar != undefined)
+                window.bar.destroy();
+                window.bar = new Chart(grapharea, {});
+
+            document.getElementById("myPieChart").style.display = 'none'
+            document.getElementById("myPieChart2").style.display = 'none'
+            document.getElementById("myPieChart3").style.display = 'none'
+            document.getElementById("myPieChart4").style.display = 'none'
+
+                                    var test = document.getElementsByClassName('test')
+                                    for (var i in test){
+                                        test[i].innerText = ""
+                                    }
+           console.log("1차 통과")
+            var param1 = document.getElementById('add1').value
+            var param2 = document.getElementById('add2').value
+            var param3 = document.getElementById('add3').value
+            var param4 = document.getElementById('param1').value
+            var param5 = document.getElementById('param2').value
+
+<!--            var param6 = document.getElementById('g1').value-->
+<!--            var param7 = document.getElementById('g2').value-->
+<!--            var param8 = document.getElementById('g3').value-->
+<!--            var param9 = document.getElementById('g4').value-->
 
 
-    }
-
-</script>
-<script type="text/javascript">
-        function changeByJS() {
-            let x = document.getElementsByClassName("quiz-text")[0];
-            x.innerText="34코어";
-            x.style.color="red";
-    }
-</script>
-<script type="text/javascript">
-        function changeByJS22() {
-            let x = document.getElementsByClassName("quiz-text2")[0];
-            x.innerText="(12/7/5/10)";
-            x.style.color="black";
-    }
-
-
-    </script>
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-<script type="text/javascript">
-window.onload = function()
-        {
-        var dataPoints = [];
-        var result;
-        console.log("1차 통과")
-        var param1 = document.getElementById('param1').value
-        var param2 = document.getElementById('param2').value
-        var param3 = document.getElementById('param3').value
-        var param4 = document.getElementById('param4').value
-        var param5 = document.getElementById('param5').value
-        var param6 = document.getElementById('param6').value
-
-        var chart = new CanvasJS.Chart("chartContainer", {
-<!--            title: {-->
-<!--                text: "Rendering Chart with dataPoints from External JSON"-->
-<!--            },-->
-             axisX:{
-               viewportMaximum: 100000
-             },
-            data: [{
-                type: "scatter",
-<!--                color: "red",-->
-                dataPoints: dataPoints,
-            }]
-        });
-        $.ajax({
-                    type: 'POST',
-                    url: 'http://127.0.0.1:5000/test2',
-                    data: {
-                        itemid1: param1,
-                        itemid2: param2,
-                        itemid3: param3,
-                        itemid4: param4,
-                        itemid5: param5,
-                        itemid6: param6
-                    },
-                    dataType: 'JSON',
-                    success: function(result)
+                                                var t = $('#tableData').DataTable().destroy();
+                                                var t = $('#tableData').DataTable(
+                                                    {
+                                                        columnDefs: [
+                                                            { targets: '_all' }
+                                                        ],
+                                                        lengthChange: false,
+                                                        searching: false,
+                                                        ordering: false,
+                                                        info: false,
+                                                        paging: true
+                                                    }
+                                                );
+                                                t.clear();
+                                                t.draw();
+            console.log("2차 통과")
+            console.log(param2);
+            $.ajax({
+                            type : 'POST',
+                            url : 'http://127.0.0.1:5000/test3',
+                            data : {
+                                    itemid1:param1,
+                                    itemid2:param2,
+                                    itemid3:param3,
+                                    itemid4:param4,
+                                    itemid5:param5
+<!--                                    itemid6:param6,-->
+<!--                                    itemid7:param7,-->
+<!--                                    itemid8:param8,-->
+<!--                                    itemid9:param9-->
+                                    },
+                            dataType : 'JSON',
+                            success : function(result)
                                 {
-                                console.log(result[1])
-                                $.each(result, function(key, value)
-                                        {
-                                        dataPoints.push({
-                                            x: value[0],
-                                            y: value[1]
-                                            });
-                                        console.log(value[0])
+                                var locations = result[0]
+                                        console.log(locations);
 
-                                        });
-                                chart.render();
+                                        for (var i in locations){
+                                              t.row.add(
+                                                     [locations[i][0], locations[i][3], locations[i][9], locations[i][8],
+                                                      locations[i][5],locations[i][6],locations[i][7],locations[i][4],
+                                                      locations[i][10],locations[i][11],locations[i][12],locations[i][13],locations[i][14],locations[i][15]]).draw();
+                                        }
+
+
+                                    var table1 = $('#tableData').DataTable();
+
+                                    locations1 = result[1]
+                                    console.log("locaton1")
+                                    console.log(result[1])
+
+
+
+
+                                    var train2 = document.getElementsByTagName('canvas')
+                                    for (var i in locations1)
+                                    {
+                                        var train = [locations1[i][1], locations1[i][2], locations1[i][3], locations1[i][4]]
+                                        console.log(train)
+
+                                        var ctx = train2[i]
+                                                var myPieChart = new Chart(ctx, {
+                                                  type: 'pie',
+                                                  data: {
+                                                    labels: ["무선", "광전화", "전용", "초고속" ],
+                                                    datasets: [{
+                                                      data: train,
+                                                      backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
+                                                    }],
+                                                  },
+                                                });
+                                        train2[i].style.display = 'block'
+                                        test[i].innerText = locations1[i][0]
+                                    }
+                                    if (locations1 == "")
+                                     {
+                                        document.getElementById('a5').style.display = 'block';
+                                     }
+
+                                    var buttons = new $.fn.tableData.Buttons(table1, {
+                                             buttons: [
+
+                                               'excelHtml5'
+
+                                            ]
+                                        }).container().appendTo($('#excel'));
+
+
+
 
                                 }
-                })
+                    });
+            }
+        </script>
 
+    <script type="text/javascript">
 
-}
-</script>
-<script type="text/javascript">
+         var totaldata = JSON.parse('{{ g22 | tojson | safe}}');
+         locations = totaldata;
+         console.log('totaldata');
+         console.log(totaldata);
+          var row = `<option value="">선택하세요</option>`
+                                        var table = $('#g2')
+                                      table.append(row)
+                                    for (var i in locations){
 
+                                        console.log(locations[i][0])
+                                      var row = `
+                                                <option value="${locations[i][0]}">${locations[i][0]}</option>`
+                                        var table = $('#g2')
+                                      table.append(row)
+                                    }
+    </script>
 
+    <script type="text/javascript">
+           function gg2() {
+            var x = document.getElementById("g2").value;
+            $('#g3').empty();
+            $('#g4').empty();
+            console.log('test')
+             $.ajax({
+                            type : 'POST',
+                            url : 'http://127.0.0.1:5000/group2',
+                            data : {
+                                    x_py: x
+                            },
+                            dataType : 'JSON',
+                            success : function(result){
+            locations = result[0];
+          var row = `<option value="">선택하세요</option>`
+                                        var table = $('#g3')
+                                      table.append(row)
+                                    for (var i in locations){
 
-</script>
-<!--var chart = new CanvasJS.Chart("chartContainer", {-->
-<!--	animationEnabled: true,-->
-<!--	title:{-->
-<!--		text: "Server Performance"-->
-<!--	},-->
-<!--	axisX: {-->
-<!--		title:"Server Load (in TPS)"-->
-<!--	},-->
-<!--	axisY:{-->
-<!--		title: "Response Time (in ms)",-->
-<!--		includeZero: true-->
-<!--	},-->
-<!--	data: [{-->
-<!--		type: "scatter",-->
-<!--		toolTipContent: "<span style=\"color:#4F81BC \"><b>{name}</b></span><br/><b> Load:</b> {x} TPS<br/><b> Response Time:</b></span> {y} ms",-->
-<!--		name: "Server Pluto",-->
-<!--		showInLegend: true,-->
-<!--		dataPoints: [-->
-<!--			{ x: 23, y: 330 },-->
-<!--			{ x: 28, y: 390 },-->
+                                      console.log(locations[i][0])
+                                      var row = `
+                                                <option value=${locations[i][0]}>${locations[i][0]}</option>`
+                                        var table = $('#g3')
+                                      table.append(row)
+                                    }
+                            }
+            });
+    };
+    </script>
 
-<!--		]-->
-<!--	},-->
-<!--	{-->
-<!--		type: "scatter",-->
-<!--		name: "Server Mars",-->
-<!--		showInLegend: true,-->
-<!--		toolTipContent: "<span style=\"color:#C0504E \"><b>{name}</b></span><br/><b> Load:</b> {x} TPS<br/><b> Response Time:</b></span> {y} ms",-->
-<!--		dataPoints: [-->
-<!--			{ x: 19, y: 200 },-->
-<!--			{ x: 27, y: 300 },-->
-<!--			{ x: 30, y: 50 },-->
+    <script type="text/javascript">
+           function gg3() {
+            var x = document.getElementById("g3").value;
+            $('#g4').empty();
+            console.log('test')
+             $.ajax({
+                            type : 'POST',
+                            url : 'http://127.0.0.1:5000/group3',
+                            data : {
+                                    x_py: x
+                            },
+                            dataType : 'JSON',
+                            success : function(result){
+            locations = result[0];
+          var row = `<option value="">선택하세요</option>`
+                                        var table = $('#g4')
+                                      table.append(row)
+                                    for (var i in locations){
 
-<!--		]-->
-<!--	}]-->
-<!--});-->
-<!--chart.render();-->
-
-
+                                      console.log(locations[i][0])
+                                      var row = `
+                                                <option value=${locations[i][0]}>${locations[i][0]}</option>`
+                                        var table = $('#g4')
+                                      table.append(row)
+                                    }
+                            }
+            });
+    };
+    </script>
 
 
 </body>

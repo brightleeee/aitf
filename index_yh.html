@@ -30,8 +30,13 @@
     <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <style type="text/css">
         .dohyeon { font-family: 'Noto Sans KR', sans-serif; }
+        .jua { font-family: 'Jua', sans-serif; }
+        .border { border-color: none; }
     </style>
     <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -61,57 +66,16 @@
                     <img src="../static/img/ktci2.png" alt="My Image" width=auto; height="50">
                     </div>
                 </span>
-            <div class="navbar-header">
-
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand dohyeon" href="http://127.0.0.1:5000/" style="font-size: 25px; padding: 0px 40px;">　　　</a>
-            </div>
-            <!-- /.navbar-header -->
-
-            <ul class="nav navbar-top-links navbar-right">
-
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
-
+            <a class="navbar-brand dohyeon" href="http://127.0.0.1:5000/" style="font-size: 25px; padding: 0px 120px;">OSP 시설분석을 통한 인입광케이블 예측설계　</a>
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
 
                         <li>
-                            <a href="http://127.0.0.1:5000/" style="font-size: 16px; color: #5a5a5a;"><i class="bi-lightbulb"></i> &nbsp;신축 건물 설계</a>
+                            <a href="http://127.0.0.1:5000/" style="font-size: 17px; color: #5a5a5a;"><i class="bi-lightbulb"></i> &nbsp;&nbsp;신축건물 인입광 설계</a>
                         </li>
                         <li>
-                            <a href="#" style="font-size: 16px; color: #5a5a5a;"><i class="bi-card-list"></i> &nbsp;상세 정보</a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                <a href="index3.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;전체 시설 현황</a>
-                                </li>
-                                <li>
-                                <a href="index4.html" style="font-size: 15px; color: #5a5a5a;"><i class="glyphicon glyphicon-search"></i> &nbsp;기출 건물 조회</a>
-                                </li>
-                            </ul>
+                            <a href="index4.html" style="font-size: 17px; color: #5a5a5a;"><i class="glyphicon glyphicon-search"></i> &nbsp;&nbsp;기축건물 시설현황</a>
                         </li>
                     </ul>
                 </div>
@@ -132,7 +96,7 @@
             <!-- 내용 -->
             <div class="row">
                    <div class="panel panel-default">
-                        <div class="panel-heading">
+                        <div class="panel-heading" style="font-size:18px; color: #000; background-color: #B9AFF9; border-color: #B9AFF9;">
                             입력
                         </div>
                         <div class="panel-body">
@@ -144,30 +108,50 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail1">연면적(㎡)</label>
+                            <label class="text-white" for="inputEmail3" style="font-size:17px">지역</label>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail2">최고 층 수</label>
+                            <label class="text-white" for="inputEmail3" style="font-size:17px">건물 유형</label>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail2">최저 층 수</label>
+                            <label class="text-white" for="inputEmail1" style="font-size:17px">연면적(㎡)</label>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail3">지역</label>
+                            <label class="text-white" for="inputEmail2" style="font-size:17px">최고 층 수</label>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail3">건물 유형</label>
+                            <label class="text-white" for="inputEmail2" style="font-size:17px">최저 층 수</label>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail3">세대 수</label>
+                            <label class="text-white" for="inputEmail3" style="font-size:17px">세대 수</label>
                         </div>
 <!--                        <div class="col-lg-2 col-md-2 col-sm-12">-->
 <!--                            <label class="text-white" for="inputEmail3">구분</label>-->
 <!--                        </div>-->
                     </div>
                     <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <select class="form-control search-slt" id="param4">
+                                <option>선택하세요</option>
+                                <option>성남시</option>
+                                <option>부산시</option>
+                                <option>대구시</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12">
+                            <select class="form-control search-slt" id="param5" onchange="bb()">
+                                <option>선택하세요</option>
+                                <option>빌딩</option>
+                                <option>상가</option>
+                                <option>주상복합</option>
+                                <option>단독주택</option>
+
+                            </select>
+                        </div>
+
+
                         <div class="col-lg-2 col-md-2 col-sm-12 pt-0">
-                            <input type="number" class="form-control search-slt" placeholder="예) 1350"
+                            <input type="number" class="form-control search-slt" placeholder="예) 50000"
                                    id="param1" style="width: 100%;">
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
@@ -175,25 +159,8 @@
                                    id="param2" style="width: 100%;">
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <input type="number" class="form-control search-slt" placeholder="예) 7"
+                            <input type="number" class="form-control search-slt" placeholder="예) 4"
                                    id="param3" style="width: 100%;">
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <select class="form-control search-slt" id="param4">
-                                <option>선택하세요</option>
-                                <option>도심</option>
-                                <option>농촌</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <select class="form-control search-slt" id="param5">
-                                <option>선택하세요</option>
-                                <option>주상복합</option>
-                                <option>빌딩</option>
-                                <option>상가</option>
-                                <option>오피스텔</option>
-
-                            </select>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
                             <input type="number" class="form-control search-slt" placeholder="예) 45" id="param6">
@@ -202,10 +169,13 @@
                     <p style="margin-top:5px;">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-12">
-                            <button type="button" class="btn btn-info" onclick="btn_click2();changeByJS();changeByJS22();" style="padding: 6px 15px; background-color: #593cc1; border-color: #593cc1;">산출
+                            <button type="button" class="btn btn-info" onclick="btn_click2();changeByJS();" style="padding: 6px 15px; background-color: #593cc1; border-color: #593cc1; font-size:17px;">산출
 <!--                                                            <button type="button" class="btn btn-info" onclick="btn_click2();btn_click3();changeByJS();changeByJS22();" style="padding: 8px 15px;">산출-->
                             </button>
-                            <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1;">Reset
+                            <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1; font-size:17px;">Reset
+                            </button>
+                            <button class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1; font-size:17px;">
+                                            <a href="https://now.kt.co.kr/" onclick="window.open(this.href); return false" style="color: #ffffff;">투자비 산출</a>
                             </button>
 <!--                            <button type="button" class="btn btn-danger wrn-btn" onclick="btn_click2();">Excel-->
 <!--                            </button>-->
@@ -225,10 +195,9 @@
 <!--        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"-->
 <!--                aria-expanded="true" aria-controls="collapseExample" style="color: #593cc1; background-color: #ffffff; border-color: #593cc1;">더보기</button>-->
 <!--                </p>-->
-    <div class="collapse" id="collapseExample">
+<!--    <div class="collapse" id="collapseExample">
         <div class="card card-body">
-
-                <table id="tableData" class="table">
+            <table id="tableData" class="table">
         <thead id="head">
         <tr>
             <th scope="col">순번</th>
@@ -247,37 +216,88 @@
     </table>
 
         </div>
-    </div>
+    </div> -->
 
 <br>
 
     <div class="row">
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            설계 결과
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="panel panel-default col-lg-12">
+                            <div class="panel-heading" style="font-size:18px; color: #000; background-color: #B9AFF9; border-color: #B9AFF9;">Total 코어 산출</div>
+                            <div class="panel-body text-center">
+<!--                                        <h3 class="text-light jua" style="font-size:35px">Total CORE 산출</h3>-->
+                                        <h3 class="text-light">
+                                            <span class="quiz-text jua" style="font-size:35px" >
+                                                : 산출 결과
+                                            </span>
+                                        </h3>
+                            </div>
+                            <!-- /.panel-body -->
                         </div>
-                        <div class="panel-body text-center" style="height: 205px;">
+                    </div>
 
-
-                                    <h4 class="text-light">BM별 서비스 용량</h4>
-                                    <h4 class="text-light">
-                                        <span class="quiz-text">
-                                            : 산출 결과
-                                        </span>
-                                        <span class="quiz-text2">
-                                            　
-                                        </span>
-                                    </h4>
+                    <div class="row">
+                        <div class="panel panel-default col-lg-6" style="border-color: #fff">
+                            <div class="panel-body text-center">
+                                <img src="../static/img/cho.png" width="auto"; height="100" style="float: left">
+                                        <h3 class="text-light jua" style="font-size:27px">초고속</h3>
+                                        <h3 class="text-light">
+                                            <span class="quiz-text jua ttest" style="font-size:20px">
+                                                : 산출 결과
+                                            </span>
+                                        </h3>
+                            </div>
+                            <!-- /.panel-body -->
                         </div>
-                        <!-- /.panel-body -->
+
+                        <div class="panel panel-default col-lg-6" style="border-color: #fff">
+                            <div class="panel-body text-center">
+                                <img src="../static/img/yong.png" width="auto"; height="100" style="float: left">
+                                        <h3 class="text-light jua" style="font-size:27px">전용</h3>
+                                        <h3 class="text-light">
+                                            <span class="quiz-text jua ttest" style="font-size:20px">
+                                                : 산출 결과
+                                            </span>
+                                        </h3>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
                     </div>
                     <!-- /.panel -->
+                    <div class="row">
+                        <div class="panel panel-default col-lg-6" style="border-color: #fff">
+                            <div class="panel-body text-center">
+                                <img src="../static/img/router.png" width="auto"; height="100" style="float: left">
+                                        <h3 class="text-light jua" style="font-size:27px">광전화</h3>
+                                        <h3 class="text-light">
+                                            <span class="quiz-text jua ttest" style="font-size:20px">
+                                                : 산출 결과
+                                            </span>
+                                        </h3>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+
+                        <div class="panel panel-default col-lg-6" style="border-color: #fff">
+                            <div class="panel-body text-center">
+                                <img src="../static/img/5g2.png" width="auto"; height="100" style="float: left">
+                                        <h3 class="text-light jua" style="font-size:27px">무선</h3>
+                                        <h3 class="text-light">
+                                            <span class="quiz-text jua ttest" style="font-size:20px">
+                                                : 산출 결과
+                                            </span>
+                                        </h3>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                    </div>
+
                 </div>
                 <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">BM 분포</div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default ">
+                        <div class="panel-heading" style="font-size:18px; color: #000; background-color: #B9AFF9; border-color: #B9AFF9;">BM 분포</div>
                         <div class="panel-body">
                             <canvas id="myPieChart"></canvas>
                         </div>
@@ -285,25 +305,8 @@
                     </div>
                     <!-- /.panel -->
                 </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            공사비 산출
-                        </div>
-                        <div class="panel-body text-center" style="height: 205px;">
-                                    <p>
-                                        <h4>ATACAMA Link</h4>
-                                        <button class="btn btn-info" style="margin: -4px; background-color: #593cc1; border-color: #593cc1;">
-                                            <a href="https://now.kt.co.kr/dsn/map" onclick="window.open(this.href); return false" style="color: #ffffff;">Link to ATACAMA</a>
-                                        </button>
-                                    </p>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-4 -->
+
+
     </div>
 
 
@@ -377,6 +380,8 @@
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+
 
     <script type="text/javascript">
             var result;
@@ -429,25 +434,46 @@
                                                       locations[i][5],locations[i][6],locations[i][7],locations[i][8],locations[i][9]
                                                       ]).draw();
                                         }
+                                console.log(result[0])
                                 console.log(result[1])
-                                console.log(result[2])
                                 console.log('comp')
+                                var test = result[1]
+                                var ttt = document.getElementsByClassName('quiz-text jua ttest')
+                                for (var i in test)
+                                {
+                                    ttt[i].innerText = test[i]
+                                }
 
                                 var ctx = document.getElementById("myPieChart");
+                                console.log(ctx)
+                                var myPieChart = null;
+<!--                            Null 넣어서 차트 겹치는거 없애야 함-->
                                 var myPieChart = new Chart(ctx, {
                                     type: 'pie',
                                     data: {
-                                        labels: ["초고속", "전송", "광전화", "무선"],
+                                        labels: ["초고속", "광전화", "전용", "무선"],
                                         datasets: [{
-                                            data: result[2],
+                                            data: result[1],
                                             backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
                                         }],
                                     },
+                                    options: {
+                                        plugins: {
+                                            legend: {
+                                                labels: {
+                                                    font: {
+                                                        size: 14
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 });
-                                let x = document.getElementsByClassName("quiz-text")[0];
-                                x.innerText=result[2];
-                                x.style.color="red";
 
+
+                                let x = document.getElementsByClassName("quiz-text")[0];
+                                x.innerText=result[2]+'　Core';
+                                x.style.color="red";
                             }
             });
             };
@@ -458,25 +484,48 @@
 
 <script type="text/javascript">
         function changeByJS() {
+
+
+
+            let y = document.getElementById("param1").value
+            let y2 = document.getElementById("param2").value
+            let y3 = document.getElementById("param3").value
+            let y4 = document.getElementById("param5").options[document.getElementById("param5").selectedIndex].value
+            console.log(y)
+            console.log(y4)
+            if(y=="예) 50000"){
+                alert("필수입력값을 확인하세요 연면적, 최대층수, 최저층수, 건물유형");
+                }
+            else if(y2=="예) 7"){
+                alert("필수입력값을 확인하세요 연면적, 최대층수, 최저층수, 건물유형");
+                }
+            else if(y3=="예) 4"){
+                alert("필수입력값을 확인하세요 연면적, 최대층수, 최저층수, 건물유형");
+                }
+            else if(y4=="선택하세요"){
+                alert("필수입력값을 확인하세요 연면적, 최대층수, 최저층수, 건물유형");
+                }
+            else{
             let x = document.getElementsByClassName("quiz-text")[0];
             x.innerText="Calculating...";
             x.style.color="red";
-    }
+            }
+
+    };
 </script>
-<script type="text/javascript">
+
+<!-- <script type="text/javascript">
         function changeByJS22() {
             let x = document.getElementsByClassName("quiz-text2")[0];
-            x.innerText="(초고속 3 / 전송 2 / 전용 1 / 무선 1)";
+            x.innerText="?";
             x.style.color="black";
     }
-
-
-</script>
+</script> -->
 
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 window.onload = function()
         {
         var dataPoints = [];
@@ -490,15 +539,15 @@ window.onload = function()
         var param6 = document.getElementById('param6').value
 
         var chart = new CanvasJS.Chart("chartContainer", {
-<!--            title: {-->
-<!--                text: "Rendering Chart with dataPoints from External JSON"-->
-<!--            },-->
+            title:
+                text: "Rendering Chart with dataPoints from External JSON"
+            }
              axisX:{
                viewportMaximum: 100000
              },
             data: [{
                 type: "scatter",
-<!--                color: "red",-->
+                color: "red",
                 dataPoints: dataPoints,
             }]
         });
@@ -516,6 +565,7 @@ window.onload = function()
                     dataType: 'JSON',
                     success: function(result)
                                 {
+                                chart.data.clear();
                                 console.log(result[1])
                                 $.each(result, function(key, value)
                                         {
@@ -533,8 +583,33 @@ window.onload = function()
 
 
 }
-</script>
+</script> -->
+<script type="text/javascript">
+function bb() {
 
+
+var selectOption = document.getElementById('param5');
+selectOption = selectOption.options[selectOption.selectedIndex].value;
+
+console.log(selectOption)
+
+if ( selectOption == '빌딩' ) {
+document.getElementById('param6').disabled = true;
+}
+else if ( selectOption == '상가' ) {
+document.getElementById('param6').disabled = true;
+}
+else if ( selectOption == '주상복합' ) {
+document.getElementById('param6').disabled = false;
+}
+else {
+document.getElementById('param6').disabled = false;
+}
+
+
+};
+
+</script>
 
 
 
