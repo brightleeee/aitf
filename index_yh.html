@@ -116,12 +116,14 @@
                         <div class="col-lg-2 col-md-2 col-sm-12">
                             <label class="text-white" for="inputEmail1" style="font-size:17px">연면적(㎡)</label>
                         </div>
+<!--                        (10.19 수정)-->
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail2" style="font-size:17px">최고 층 수</label>
+                            <label class="text-white" for="inputEmail2" style="font-size:17px">지상 층 수</label>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12">
-                            <label class="text-white" for="inputEmail2" style="font-size:17px">최저 층 수</label>
+                            <label class="text-white" for="inputEmail2" style="font-size:17px">지하 층 수</label>
                         </div>
+                        <!--                        (10.19 수정 끝)-->
                         <div class="col-lg-2 col-md-2 col-sm-12">
                             <label class="text-white" for="inputEmail3" style="font-size:17px">세대 수</label>
                         </div>
@@ -129,15 +131,21 @@
 <!--                            <label class="text-white" for="inputEmail3">구분</label>-->
 <!--                        </div>-->
                     </div>
+<!--                    (10.19 수정)-->
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-12">
                             <select class="form-control search-slt" id="param4">
                                 <option>선택하세요</option>
-                                <option>성남시</option>
-                                <option>부산시</option>
-                                <option>대구시</option>
+                                <option>서울</option>
+                                <option>성남</option>
+                                <option>부산</option>
+                                <option>대구</option>
+                                <option>대전</option>
+                                <option>인천</option>
+                                <option>하남</option>
                             </select>
                         </div>
+                        <!--                    (10.19 수정 끝)-->
                         <div class="col-lg-2 col-md-2 col-sm-12">
                             <select class="form-control search-slt" id="param5" onchange="bb()">
                                 <option>선택하세요</option>
@@ -265,20 +273,8 @@
                         </div>
                     </div>
                     <!-- /.panel -->
+                    <!--                        (10.19 수정)-->
                     <div class="row">
-                        <div class="panel panel-default col-lg-6" style="border-color: #fff">
-                            <div class="panel-body text-center">
-                                <img src="../static/img/router.png" width="auto"; height="100" style="float: left">
-                                        <h3 class="text-light jua" style="font-size:27px">광전화</h3>
-                                        <h3 class="text-light">
-                                            <span class="quiz-text jua ttest" style="font-size:20px">
-                                                : 산출 결과
-                                            </span>
-                                        </h3>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-
                         <div class="panel panel-default col-lg-6" style="border-color: #fff">
                             <div class="panel-body text-center">
                                 <img src="../static/img/5g2.png" width="auto"; height="100" style="float: left">
@@ -290,6 +286,20 @@
                                         </h3>
                             </div>
                             <!-- /.panel-body -->
+                        </div>
+
+                        <div class="panel panel-default col-lg-6" style="border-color: #fff">
+                            <div class="panel-body text-center">
+                                <img src="../static/img/router.png" width="auto"; height="100" style="float: left">
+                                        <h3 class="text-light jua" style="font-size:27px">광전화</h3>
+                                        <h3 class="text-light">
+                                            <span class="quiz-text jua ttest" style="font-size:20px">
+                                                : 산출 결과
+                                            </span>
+                                        </h3>
+                            </div>
+                            <!-- /.panel-body -->
+                            <!--                        (10.19 수정 끝)-->
                         </div>
                     </div>
 
@@ -451,7 +461,7 @@
                                 var myPieChart = new Chart(ctx, {
                                     type: 'pie',
                                     data: {
-                                        labels: ["초고속", "광전화", "전용", "무선"],
+                                        labels: ["초고속", "전용", "무선", "광전화"],
                                         datasets: [{
                                             data: result[1],
                                             backgroundColor: ['#fe8bdb', '#68fce1', '#7788ff', '#ffd45a'],
@@ -494,16 +504,16 @@
             console.log(y)
             console.log(y4)
             if(y=="예) 50000"){
-                alert("필수입력값을 확인하세요 연면적, 최대층수, 최저층수, 건물유형");
+                alert("필수입력값을 확인하세요 연면적, 지상층수, 지하층수, 건물유형");
                 }
             else if(y2=="예) 7"){
-                alert("필수입력값을 확인하세요 연면적, 최대층수, 최저층수, 건물유형");
+                alert("필수입력값을 확인하세요 연면적, 지상층수, 지하층수, 건물유형");
                 }
             else if(y3=="예) 4"){
-                alert("필수입력값을 확인하세요 연면적, 최대층수, 최저층수, 건물유형");
+                alert("필수입력값을 확인하세요 연면적, 지상층수, 지하층수, 건물유형");
                 }
             else if(y4=="선택하세요"){
-                alert("필수입력값을 확인하세요 연면적, 최대층수, 최저층수, 건물유형");
+                alert("필수입력값을 확인하세요 연면적, 지상층수, 지하층수, 건물유형");
                 }
             else{
             let x = document.getElementsByClassName("quiz-text")[0];
