@@ -177,7 +177,7 @@
                     <p style="margin-top:5px;">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-12">
-                            <button type="button" class="btn btn-info" onclick="btn_click2();changeByJS();" style="padding: 6px 15px; background-color: #593cc1; border-color: #593cc1; font-size:17px;">산출
+                            <button type="button" class="btn btn-info" onclick="changeByJS();btn_click2();" style="padding: 6px 15px; background-color: #593cc1; border-color: #593cc1; font-size:17px;">산출
 <!--                                                            <button type="button" class="btn btn-info" onclick="btn_click2();btn_click3();changeByJS();changeByJS22();" style="padding: 8px 15px;">산출-->
                             </button>
                             <button type="reset" class="btn btn-info" style="background-color: #593cc1; border-color: #593cc1; font-size:17px;">Reset
@@ -502,24 +502,26 @@
             let y3 = document.getElementById("param3").value
             let y4 = document.getElementById("param5").options[document.getElementById("param5").selectedIndex].value
             console.log(y)
+            console.log(y2)
+            console.log(y3)
             console.log(y4)
-            if(y=="예) 50000"){
+            if(y==""){
                 alert("필수입력값을 확인하세요 연면적, 지상층수, 지하층수, 건물유형");
                 }
-            else if(y2=="예) 7"){
+            else if(y2==""){
                 alert("필수입력값을 확인하세요 연면적, 지상층수, 지하층수, 건물유형");
                 }
-            else if(y3=="예) 4"){
+            else if(y3==""){
                 alert("필수입력값을 확인하세요 연면적, 지상층수, 지하층수, 건물유형");
                 }
             else if(y4=="선택하세요"){
                 alert("필수입력값을 확인하세요 연면적, 지상층수, 지하층수, 건물유형");
                 }
             else{
-            let x = document.getElementsByClassName("quiz-text")[0];
-            x.innerText="Calculating...";
-            x.style.color="red";
-            }
+                let x = document.getElementsByClassName("quiz-text")[0];
+                x.innerText="Calculating...";
+                x.style.color="red";
+                }
 
     };
 </script>
