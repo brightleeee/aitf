@@ -345,6 +345,36 @@ def languages3():
 
     return jsonify(rows, rows2)
 
+@app.route("/test4", methods=["POST"])
+def languages4():
+    value1 = request.form["itemid1"]
+
+    if value1 == "선택하세요": #전체 검색 쿼리
+        sql = "SELECT * FROM sampledb"
+        sql2 = "SELECT 국사, sum(무선),sum(전송),sum(전용),sum(초고속) FROM sampledb group by 국사"
+
+    else:
+        sql = "SELECT * FROM sampledb where 국사 like '%" + value1 + "%'"
+        sql2 = "SELECT 국사, sum(무선),sum(전송),sum(전용),sum(초고속) FROM sampledb where 국사 like '%" + value1 + "%' group by 국사"
+
+
+    print("sql2 : " + sql2)
+
+    conn = sqlite3.connect("trest_3.db")
+    curs = conn.cursor()
+    curs.execute(sql)  # 위의 BM구분에 대한 상황들을 처리해주기 위해 sql로 설정
+    print(sql)
+    # row_headers = [x[0] for x in curs.description]
+    rows = curs.fetchall()
+    print(rows)
+
+    curs.execute(sql2)  # 위의 BM구분에 대한 상황들을 처리해주기 위해 sql로 설정
+    print(sql2)
+    # row_headers = [x[0] for x in curs.description]
+    rows2 = curs.fetchall()
+    print(rows2)
+
+    return jsonify(rows, rows2)
 
 @app.route("/pie1", methods=["POST"])
 def piepie1():
